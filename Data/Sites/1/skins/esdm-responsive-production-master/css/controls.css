@@ -1,0 +1,180 @@
+﻿html {
+    background: #fdfdfd;
+    font-family: "Open Sans", sans-serif;
+    color: #333;
+}
+
+h2 {
+    /*color: #707070;*/
+	color: #00A946;
+    font-size: 2.2rem;
+}
+
+.moduletitle {
+        font-size: 2.0rem;
+    }
+
+
+/*remove top margin from module title*/
+.slide-panel h2:first-child, .slide-panel h3:first-child, .slide-panel h4:first-child {
+  /*  margin-top: 0px;*/
+    /*color: #999999;*/
+	/*color: #00A946;*/
+   /* font-size: 2.2rem;*/
+}
+
+label {
+    font-weight: normal;
+}
+
+.moduleanchor {
+    display: none;
+}
+
+.head {
+    /* background:url('images/header-slice.png') repeat-x 0 -28px transparent;   */
+}
+
+/*----------------------*/
+/*        MENUS         */
+
+.workflow {
+    /*hide admin menu*/
+    display: none;
+}
+
+.navigation, .admin-tools {
+    background-color: #fff;
+}
+
+.search-control {
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+	/*max-width:75%;*/
+}
+
+.btn-search, .btn-search.active, .btn-search:focus, .btn-search:hover {
+    color: #fff;
+    background-color: #00A946;
+    border-color: #ccc;
+    border-left: none;
+}
+
+.menu-control::before, .menu-control:after {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+/* menu link */
+.main-nav li a {
+    color: #B395D0;
+    font-weight: bold;
+}
+/* space between menu items */
+.nav-stacked > li + li {
+    margin-top: 6px;
+    margin-left: 0;
+}
+/* menu link*/
+.nav-pills > li > a, .nav-pills > li > a:hover, .nav-pills > li > a:focus {
+    color: #00A946;
+    background-color: #F2F2F2;
+    border: 1px solid #E2E2E2;
+}
+/* active menu link */
+.nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
+    color: #fff;
+    background-color: #A5A5A5;
+    border: 1px solid #9B9B9B;
+    /*background-color: #CCCCCC;*/
+}
+/* menu icon */
+.main-nav li .main-nav-icon {
+    color: #00A946;
+}
+/* menu icon hover */
+.main-nav li:hover .main-nav-icon {
+    color: #00A946;
+}
+
+.main-nav li.active:hover .main-nav-icon {
+    color: #fff;
+}
+/*
+#hlLogo {
+    background-image: url('images/esdm-banner-mobile.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 162px;
+    height: 34px;
+    display: block;
+    margin-top: 6px;
+    margin-left: 15px;
+    float: left;
+}*/
+
+
+
+
+#mobileLogoContainer {
+    background: url('images/esdm-banner-mobile.png') no-repeat center;
+	height: 63px;
+	padding-bottom: 5px;
+	padding-bottom: 5px;
+    bottom: 10px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+
+ @media screen and (max-width: 480px) 
+{
+	#mobileLogoContainer {
+		background: url('images/esdm-banner-small.png') no-repeat center;
+		height: 63px;
+		margin-right: 10px;
+		padding-bottom: 5px;
+		bottom: 10px;
+		position: relative;
+		margin-bottom: 10px;
+	}
+}
+
+
+
+
+.navbar-inverse {
+    background-color: transparent;
+}
+
+.navbar {
+    margin-bottom: 0px;
+    /*border-bottom:1px solid #ccc;*/
+    border-bottom: none;
+}
+
+.navbar-inverse .navbar-toggle {
+    border-color: #ccc;
+}
+
+.admin-open .glyphicon {
+    color: #00A946;
+}
+
+.foot {
+    font-size: 1.1rem;
+    width: 90%;
+    margin: 0 auto 1.5em auto;
+    text-align: center;
+    color: #666565;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border: 1px solid #E0E0E0;
+    background-image: -webkit-gradient( linear, left top, left bottom, color-stop(0.51, #F2F2E6), color-stop(0.71, #FAF9F2) );
+    background-image: -o-linear-gradient(bottom, #EFE6EF 51%, #F9F2F9 71%);
+    background-image: -moz-linear-gradient(bottom, #EFE6EF 51%, #F9F2F9 71%);
+    background-image: -webkit-linear-gradient(bottom, #EFE6EF 51%, #F9F2F9 71%);
+    background-image: -ms-linear-gradient(bottom, #EFE6EF 51%, #F9F2F9 71%);
+    background-image: linear-gradient(to bottom, #EFE6EF 51%, #F9F2F9 71%);
+}
+

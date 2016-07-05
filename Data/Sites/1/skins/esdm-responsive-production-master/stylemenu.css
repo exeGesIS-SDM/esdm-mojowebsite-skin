@@ -1,0 +1,274 @@
+
+
+div.AspNet-Menu-Horizontal 
+{
+	position:relative; 
+	height:34px;
+	margin:12px 55px 0 0 ;
+	/*background:transparent url(images/bgOFF.gif) repeat-x top left;*/
+	font-size: 1em ; 
+	font-family:'open_sanssemibold', Arial;
+	width:auto ;
+	z-index:100;
+	/*border-bottom:1px solid #c8c8c8;*/	
+	text-transform:uppercase;  
+	float:right !important;
+}
+div.AspNet-Menu-Horizontal ul.AspNet-Menu
+ { 
+	margin:0; padding:0; list-style-type:none; width:auto; z-index:2;
+ }
+div.AspNet-Menu-Horizontal ul.AspNet-Menu li
+{
+	display:block; float:left; margin:0; 
+}	
+ul.AspNet-Menu li img 
+{ 
+	display:none;
+
+}
+
+div.AspNet-Menu-Horizontal ul li.static.AspNet-Menu-SelectedLeaf a { color:#5ab05a; outline: 0; }
+
+/* flickering fix */
+div.AspNet-Menu-Horizontal ul li ul
+{
+    display: none;
+}
+div.AspNet-Menu-Vertical ul li ul
+{
+    display: none;
+}
+/* end flickering fix */
+
+
+div.AspNet-Menu-Horizontal ul li.static a 
+{ 	
+      left:10px;
+	display:block; 
+	float:left; 
+	padding:11px 18px 0 18px;
+	height:33px;
+	text-decoration:none;
+	color:#3F3F3F;
+	outline: 0;
+	/*background:transparent url(bgDIVIDER.gif) no-repeat top right;*/
+}
+
+
+
+
+ div.AspNet-Menu-Horizontal ul li.static.AspNet-Menu-SelectedLeaf.has-popup a
+{
+	background-image:url('arrowRight.gif');
+	background-repeat:no-repeat;
+    background-position:right center;	
+	padding-right:20px;
+	outline: 0;
+}
+
+
+div.AspNet-Menu-Horizontal ul li.static.AspNet-Menu-SelectedLeaf a { font-family: 'open_sansbold', arial; }
+div.AspNet-Menu-Horizontal ul li:last-child a { padding-right:0 !important;}
+
+
+div.AspNet-Menu-Horizontal ul.AspNet-Menu li.AspNet-Menu-SelectedWithChildren a.AspNet-Menu,
+ div.AspNet-Menu-Horizontal ul.AspNet-Menu li.AspNet-Menu-SelectedLeaf a.AspNet-Menu,
+ div.AspNet-Menu-Horizontal ul.AspNet-Menu li.AspNet-Menu-Leaf a.AspNet-Menu:hover, div.AspNet-Menu-Horizontal ul.static a:hover {
+    color: #00a946;
+}
+
+div.AspNet-Menu-Horizontal ul.AspNet-Menu .AspNet-Menu-SelectedLeaf .dynamic
+{
+	color: #000;
+}
+
+
+
+div.AspNet-Menu-Horizontal ul.AspNet-Menu li.AspNet-Menu-SelectedWithChildren a.AspNet-Menu,
+div.AspNet-Menu-Horizontal ul.AspNet-Menu li.AspNet-Menu-SelectedLeaf a.AspNet-Menu,
+div.AspNet-Menu-Horizontal ul.AspNet-Menu li.AspNet-Menu-Leaf a.AspNet-Menu:hover,
+div.AspNet-Menu-Horizontal ul.static a:hover
+{ 
+	color:#00A946; 
+	/*background:#fff url(bgON.gif) no-repeat top left; */
+}
+
+div.AspNet-Menu-Horizontal a
+{
+	outline: 0;
+	white-space:nowrap;
+}
+
+div.AspNet-Menu-Horizontal ul.dynamic {
+   min-width:200px;
+	margin: 0 0;
+	padding: 0 0;	
+	display:none;
+	z-index:600;
+}
+div.AspNet-Menu-Horizontal ul.dynamic ul.dynamic 
+{
+z-index:700;
+}
+
+div.AspNet-Menu-Horizontal ul.dynamic li {
+    /*background-color:#E8E9E0;*/
+    line-height: 15px;	
+	display:block;
+	width:100%;
+	list-style: none;
+}
+div.AspNet-Menu-Horizontal ul.dynamic li a {  
+	background-image:none;
+	background-color:#FFFFFF;	
+	display:block;
+	width:100%;
+	border-bottom:1px solid #BBBCB8;
+	padding-right:0px;
+	border-left:1px solid #BBBCB8;
+	border-right:1px solid #BBBCB8;
+	color: #3f3f3f  !important;
+	margin-left: 20px;
+}
+
+div.AspNet-Menu-Horizontal ul.dynamic li a:hover {  
+	background-color:white;
+	color: #00A946 !important;
+}
+
+div.AspNet-Menu-Horizontal ul > li:hover a{ 
+	background-color:white;
+}
+
+
+/*---------------*/
+/* VERTICAL MENU */
+div.AspNet-Menu-Vertical
+{
+
+}
+div.AspNet-Menu-Vertical ul
+{
+	list-style: none;
+}
+div.AspNet-Menu-Vertical a
+{
+	color:#3F3F3F;
+    white-space:nowrap;
+	outline: 0;
+}
+
+div.AspNet-Menu-Vertical
+{
+    /*float:left;*/
+    /*width: 191px;*/
+	width: 230px;
+    background-color: #f2f2f2;
+    margin:0px;   
+    text-align:left !important; 
+}
+div.AspNet-Menu-Vertical ul.static
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float:none !important;
+    border: none; 
+}
+div.AspNet-Menu-Vertical li.static
+{
+    border-bottom: 1px solid #c8c8c8;
+    margin: 0;
+}
+div.AspNet-Menu-Vertical li.static:first-child
+{
+   /* border-top: 1px solid #c8c8c8;  */
+   border-top:none;
+}
+
+div.AspNet-Menu-Vertical li.static a {
+    display: block;
+    padding: 5px 5px 5px 0.5em;
+    border-left: 10px solid #dedcdc;
+    border-right: 10px solid #f7f7f7;
+    background-color: #f2f2f2;                
+    width: 100%;
+}
+html>body div.AspNet-Menu-Vertical li.static a {
+    width: auto;
+    text-decoration:none
+}
+div.AspNet-Menu-Vertical li.static a:hover {
+    border-left: 10px solid #8E8E8E;
+    border-right: 10px solid #A5A5A5;
+    color: #ffffff !important;
+    background-color: #707070;
+}
+/* keep the parent highlighted when selecting child popups */
+div.AspNet-Menu-Vertical ul > li.static:hover a.static{ 
+	background-color: #707070;
+    border-left: 10px solid #8E8E8E;
+    border-right: 10px solid #A5A5A5;	
+	color: #ffffff !important;
+}
+/* SUB MENUS */
+div.AspNet-Menu-Vertical li.static ul {
+/*    display: block !important;  
+    position:inherit !important; 
+    left:auto !important; 
+    top:auto !important; 
+    padding-left:0px !important;*/
+} /* lots of !important as we're having to override inline styles */
+
+div.AspNet-Menu-Vertical ul.dynamic {   
+	margin: 0 0;
+	padding: 0 0;
+	border:1px solid #c8c8c8;
+	border-top:none;
+	border-top:bottom;
+	top:-1px !important;	
+	z-index:10;
+	display:none;
+}
+
+div.AspNet-Menu-Vertical li.dynamic a {   
+    border-left: 10px solid #ffffff;
+    border-right: 10px solid #ffffff;
+    background-color: #ffffff;
+}
+div.AspNet-Menu-Vertical li.dynamic a:hover {
+    border-left: 10px solid #ffffff;
+    border-right: 10px solid #ffffff;
+    background-color: #ffffff;
+    text-decoration:underline;
+    color: #00A946 !important;
+}
+div.AspNet-Menu-Vertical li.dynamic
+{
+    border-top: 1px solid #c8c8c8;
+    margin: 0;
+}
+
+div.AspNet-Menu-Vertical li.AspNet-Menu-SelectedLeaf a.AspNet-Menu-SelectedLeaf, div.AspNet-Menu-Vertical a.AspNet-Menu.AspNet-Menu-SelectedWithChildren
+{
+	background-color: #707070;
+    border-left: 10px solid #8E8E8E;
+    border-right: 10px solid #A5A5A5;	
+	color: #ffffff !important;
+}
+div.AspNet-Menu-Vertical li.has-popup a
+{
+	background-image:url('arrowRight.gif');
+	background-repeat:no-repeat;
+    background-position:right center;	
+	padding-right:20px;
+}
+div.AspNet-Menu-Vertical li.AspNet-Menu-Leaf a
+{
+	background-image:none;
+}
+
+
+
+

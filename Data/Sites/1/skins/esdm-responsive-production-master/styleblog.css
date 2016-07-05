@@ -1,0 +1,24 @@
+.blogwrapper {   }
+.blognavleft {float: left; width: 155px; padding: 5px 5px 30px 5px; margin: 0px 0px 0px 0px;  }
+.blognavright {float: right; width: 155px;  padding: 5px 5px 30px 5px; margin: 0px 0px 0px 0px;  }
+.blogcenter-nonav {margin: 0px 0px 0px 0px; padding: 5px 0px 0px 5px;    }
+.blogcenter-leftnav {margin: 0px 0px 0px 165px; padding: 5px 0px 0px 5px;  }
+.blogcenter-rightnav {margin:0px 165px 0px 0px; padding: 5px 0px 0px 5px;   }
+.bloginfo {   }
+.bloginfotitle {  font-size: 110%; font-weight: bold; }
+.blogtitle { margin: 5px 0px 0px 0px;   font-weight: bold;  }
+.blogdate { padding: 0px 5px 0px 0px; font-size:smaller;  }
+.blogcommentlink { text-align:right; padding: 0px 5px 3px 0px; font-family: Trebuchet MS;  border-bottom: solid 1px #ccc;  }
+.blogcommenthead { font-size: 80%;  }
+.blogcommenttitle {  border-bottom: solid 1px #ccc;  }
+.blogcommenttext {  border-bottom: solid 1px #ccc;   }
+.blogcommentposter { font-size:smaller;   }
+.blognav ul { list-style-type:none;  }
+.blognav li { list-style: none; margin: 0px 0px 3px -30px;  }
+.blogpager{ margin-top: 1em;}
+/* hide the post date in the ESDM portfolio blog */
+.portfolio .bdate {display: none;}
+/* hide the post category tags in the ESDM portfolio blog listing page (show them on the individual post details) */
+.portfolio  .blogwrapper .blogtags {display: none;}
+/* reduce font size slightly */
+.portfolio .blogwrapper {font-size: 1.2rem; line-height: 1.2em;}

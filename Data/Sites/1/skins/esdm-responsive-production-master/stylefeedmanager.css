@@ -1,0 +1,33 @@
+.rsswrapper {   }
+.rssnavleft {float: left; width: 235px; padding: 5px 5px 30px 5px; margin: 0px 0px 0px 0px; }
+.rssnavright {float: right; width: 235px;  padding: 5px 5px 30px 5px; margin: 0px 0px 0px 0px;  }
+.rsscenter-nonav {margin: 0px 0px 0px 0px; padding: 5px 0px 0px 5px; font-size: 105%;  }
+.rsscenter-leftnav {margin: 0px 0px 0px 245px; padding: 5px 0px 0px 5px; font-size: 105%;  }
+.rsscenter-rightnav {margin:0px 245px 0px 0px; padding: 5px 0px 0px 5px; font-size: 105%;   }
+.rsstitle { margin: 5px 0px 0px 0px; font-size: 15px; font-weight: bold; }
+.rsstitle a:link, .rsstitle a:visited, .rsstitle a:active, .rsstitle a:hover { color: #00A946; }
+.rssdate {  padding: 0px 5px 0px 0px; text-align:right;    }
+.rsstext { }
+.rsstext a:link, .rsstext a:visited, .rsstext a:active, .rsstext a:hover { color: #00A946; }
+.rssauthor {  padding: 0px 0px 5px 5px; font-family: Trebuchet MS;  border-bottom: solid 1px #ccc;   }
+.FeedHead { background-color: #E0D7CC; border-bottom-color: #CAB693; border-bottom-style: solid;
+	border-bottom-width: 1px; padding: 0.5em; }
+.FeedBody { background-color: #EEEDE9; border-color: #CAB693; border-style: solid; border-width: 1px;
+	border-top-width: 0px; padding-left: 0.5em; padding-right: 0.5em; }
+.rssfeedentryTrue {   }
+.rssfeedentryFalse { background-color: Silver; }
+.feedscroller
+{
+position:relative;
+display:block;
+overflow:hidden;
+}
+   
+.feedscroller .rsswrapper { position:relative;
+display:block;
+overflow:hidden;
+height:250px;}
+.feedscroller .rssentries
+{
+position:absolute;
+}

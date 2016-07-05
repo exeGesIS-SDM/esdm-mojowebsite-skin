@@ -1,0 +1,98 @@
+{    
+    "appTitle": "FlyMapperTEST",
+    "msgBoxTitle": "FlyMapperTEST",
+    "isMobileDeployment": true,
+    "proxyUrl": "",
+    "api": {        
+        "WalesTest": {
+              "authenticationUrl": "http://wales-test.flymapper.org/esdm.flyMapper.mojoPortal/handlers/MobileAuthentication.ashx",
+              "submitIncidentUrl": "http://wales-test.flymapper.org/esdm.flyMapper.mojoPortal/handlers/MobileSubmitIncident.ashx",
+              "businessDataUrl": "http://wales-test.flymapper.org/esdm.flyMapper.mojoPortal/handlers/MobileIncidents.ashx",
+              "lookupDataUrl": "http://wales-test.flymapper.org/esdm.flyMapper.mojoPortal/handlers/MobileLookupData.ashx",
+              "submitPhotoUrl": "http://wales-test.flymapper.org/esdm.flyMapper.mojoPortal/handlers/MobileUploadIncidentPhotos.ashx",
+              "photoHandlerUrl": "http://wales-test.flymapper.org/esdm.flyMapper.mojoPortal/handlers/PhotoHandler.ashx"           
+        },
+        "ScotlandTest": {
+            "authenticationUrl": "http://scotland-test.flymapper.org/esdm.flyMapper.mojoPortal/handlers/MobileAuthentication.ashx",
+            "submitIncidentUrl": "http://scotland-test.flymapper.org/esdm.flyMapper.mojoPortal/handlers/MobileSubmitIncident.ashx",
+            "businessDataUrl": "http://scotland-test.flymapper.org/esdm.flyMapper.mojoPortal/handlers/MobileIncidents.ashx",
+            "lookupDataUrl": "http://scotland-test.flymapper.org/esdm.flyMapper.mojoPortal/handlers/MobileLookupData.ashx",
+            "submitPhotoUrl": "http://scotland-test.flymapper.org/esdm.flyMapper.mojoPortal/handlers/MobileUploadIncidentPhotos.ashx",
+            "photoHandlerUrl": "http://scotland-test.flymapper.org/esdm.flyMapper.mojoPortal/handlers/PhotoHandler.ashx"
+        }	
+    },
+    "logger": {       
+        "logLevel": "DEBUG",
+        "outputToConsole": true       
+    },
+    "map": {
+        "options": {
+            "maxZoom": 18,
+            "minZoom": 7,
+            "zoomControl": true,
+            "trackResize": false,
+            "maxBounds": [[49, -7], [59, 3]],
+            "attributionControl": false,
+            "tap": false,
+            "tapTolerance": 25
+        },
+        "baseMapOptions": {
+            "name": "baseLayer",
+            "maxZoom": 18,
+            "onlineURL": "http://{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png",
+            "offlineURL": "http://otile1.mqcdn.com/tiles/1.0.0/map/",
+            "subdomains": ["otile1", "otile2", "otile3", "otile4"],
+            "filePath": ".ESDMMap",
+            "layername": "OSM",
+            "maxNativeZoom": 16,
+            "errorTileUrl": "resources/images/NoMapTile.png"
+        },
+        "startLat": 52.5,
+        "startLon": -1.0,
+        "startZoom": 7,
+        "defaultPadding": 5,
+        "mapTolerance": 20,        
+        "zoomLevelToShowLayers": 15,        
+        "useOfflineBaseMaps": true,        
+        "offlineMapsRequestPause": 0,        
+        "offlineMapsPauseFail": 100
+    },
+    "gps": {
+        "options": {
+            "maximumAge": 500,
+            "timeout": 30000,
+            "enableHighAccuracy": true
+        },        
+        "minAccuracy": 200,
+        "locateOnMapCreate":false,
+		"backgroundInterval":180000
+    },
+    "data": {        
+        "dataSyncSubtractMin" : 180,        
+        "dataSyncRetryMins" : 5,        
+        "showWarningAfterMins" : 0,        
+        "defaultStatus" : "unrslvd",
+	"clearDownDate" : "09 Mar 2016 10:50:00 GMT",
+        "purgeResolvedIncidentsDays": 30
+    },
+    "photo": {        
+        "height": 800,        
+        "width": 800,        
+        "quality": 50,        
+        "downloadSize": "l"
+    },
+    "picker": {
+        "height":"400px",
+        "minHeight":"400px"
+    },
+    "messages": {
+        "startUp": {
+            "isObselete": {
+                "title": null,
+                "text": null
+            },
+            "title": null,
+            "text": null
+        }
+    }
+}

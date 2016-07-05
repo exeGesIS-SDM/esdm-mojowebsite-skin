@@ -1,0 +1,414 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="~/App_MasterPages/layout.Master.cs" Inherits="mojoPortal.Web.layout" %>
+<%@ Register Namespace="sts.MobileKit.Web" Assembly="sts.MobileKit.Web" TagPrefix="mkp" %>
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]> <html class="html-class no-js iem7"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html class="html-class no-js"> <!--<![endif]-->
+	<head runat="server">
+		<meta charset="utf-8">
+		<title></title>
+
+        <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+
+		<portal:MetaContent ID="MetaContent" runat="server" PreZoomForIPhone="false" />
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="360">
+		<meta name="viewport" content="width=360">
+		<meta http-equiv="cleartype" content="on">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		
+		<link rel="icon" href="/favicon.ico" />
+
+		<!-- Touch Icons -->
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57x57-precomposed.png">
+		<link rel="shortcut icon" href="img/touch/apple-touch-icon.png">
+
+		<!--<link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.min.css">-->
+		
+		
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/controls.css">
+		<link rel="stylesheet" type="text/css" href="jquery-ui.css">
+		
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="stylemenu.css">
+		
+		
+		<script src="js/modernizr.min.js"></script>
+		<portal:StyleSheetCombiner id="StyleSheetCombiner" DisableCssHandler="true" runat="server" IncludeJQueryUI="false" UseIconsForAdminLinks="false" EnableNonClickablePageLinks="true" QtFileCssIsInMainCss="false" />
+		<portal:ScriptLoader id="ScriptLoader1" runat="server" LoadSkinCss="false" IncludeSimpleFaq="false" IncludeJQuery="false" includejQueryUICore="false" includejQueryAccordion="false" jQueryAccordionNoHeightConfig="{}" UseMobileVersionOfFlickrGallery="true" RenderjQueryInHead="false" AssumejQueryIsLoaded="true" AssumejQueryUiIsLoaded="true" AssumeMarkitupIsLoaded="true" AssumeMojoCombinedIsLoaded="false" RenderCombinedInHead="true" CombineScriptsWithScriptManager="true" IncludeColorBox="false" AutoWireJQueryUITooltip="false" />
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+	</head>
+	<!-- IMPORTANT DO NOT REMOVE 'ismobile' css class as this is used as a mobile test in some js-->
+	<body class="page-body" runat="server">
+		<portal:AnalyticsAsyncTopScript id="analyticsTop" runat="server" />
+		<portal:LayoutDisplaySettings id="LayoutDisplaySettings1" runat="server" />
+		<form class="form" id="frmMain" runat="server">	
+			<asp:ScriptManager ID="ScriptManager1" EnablePageMethods="true" runat="server" />
+			<portal:SkinFolderScript ID="sfs1" runat="server" ScriptFileName="skinscript.js" AddToCombinedScript="true" />
+			<asp:UpdatePanel runat="server" ID="UPDJavascript">
+				<ContentTemplate>			
+				</ContentTemplate>
+			</asp:UpdatePanel>			
+			
+			<asp:SiteMapDataSource ID="SiteMapData" runat="server" ShowStartingNode="false" />
+			<asp:SiteMapDataSource ID="PageMapDataSource" runat="server" ShowStartingNode="false" />
+			<asp:SiteMapDataSource ID="ChildPageSiteMapData" runat="server" ShowStartingNode="false" />
+			<div class="site-wrap">
+				
+					
+                <%--********** HEADER **********--%>
+                <header class="head" role="banner">
+				
+				<!-- START Header Container -->
+				   <div class="header_container">
+					    <div class="header_content">
+						
+							<div class="navbar-inverse navbar-static-top">
+								<div class="container">
+								
+									<div class="mobileHeaderContainer">
+										<div class="mobileHeaderSideContainer ">
+											<button id="navbar-menu-button" type="button" class="menu-open navbar-toggle">
+												<span class="sr-only">Open Menu</span>
+												<span class="icon-bar"></span>
+												<span class="icon-bar"></span>
+												<span class="icon-bar"></span>
+											</button>
+										
+										</div>
+										
+										<div class="mobileHeaderCenterContainer">
+										
+											<a id="hlLogo" href="/home">
+													<div id="mobileLogoContainer"></div>
+											</a>
+										
+										</div>
+										
+										
+										<div class="mobileHeaderSideContainer ">
+										
+										<button id="navbar-menu-admin-button" type="button" class="admin-open navbar-toggle" style="margin-right:10px">
+											<span class="sr-only">Open Admin Tools</span>
+											<span class="glyphicon glyphicon-cog"></span>
+										</button>
+										
+										</div>
+										<%--<portal:SiteTitle runat="server" id="sitetile1" SkinId="SiteTitle" />--%>
+										</div>
+								</div>
+							</div>
+					
+					
+					<!-- START SITE Horizontal Nav -->
+					<div id="siteMainHorizontalNav" class="header_content">
+                   
+						<!-- Logo -->
+						<a id="fullsizerLogo" href="/">
+						<div id="wrapheader"></div></a>
+					
+
+					<nav class="mainnav menu" style="display:inline">
+						<portal:SiteMenu CssClass="MainMenu" id="SiteMenu1" runat="server" EnableTheming="false" UseTreeView="false" HideMenuOnSiteMap="false" Direction="Horizontal" TopLevelOnly="false" DynamicDisplayLevels="1"></portal:SiteMenu>	
+					</nav>
+					
+				
+					<input type="search" id="txtsearch" onkeypress="return search(event)" placeholder="Search">
+					
+
+				  </div>
+				  <!-- END SITE Horizontal Nav -->
+				  <div class="clear">
+                  </div>
+			</div>
+		</div>
+				
+				
+		</header>
+				
+				
+				
+			   <div id="wrapcenter">
+            <%if (Request.RawUrl.ToLower() != "/" && Request.RawUrl.ToLower() != "/home")
+      {%>
+            <div class="inner-container">
+                <%}%>
+				
+                <asp:Panel ID="divLeft" runat="server" CssClass="leftside" Visible="True" SkinID="pnlPlain">
+                   
+						<nav id="pageMenu">
+						   <portal:pagemenu id="PageMenu1" 
+							runat="server" 
+							usetreeview="false" />
+						</nav>
+					
+                    <a id="startcontent"></a>
+                    <asp:ContentPlaceHolder ID="leftContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </asp:Panel>
+                <asp:Panel ID="divCenter" runat="server" Visible="True" CssClass="hideIfSmall"
+                    SkinID="pnlPlain">
+                    <portal:breadcrumbs id="Breadcrumbs" runat="server" cssclass="hideIfSmall"></portal:breadcrumbs>
+                    <portal:childpagemenu id="ChildPageMenu" runat="server" cssclass="hideIfSmall"></portal:childpagemenu>
+                    <asp:ContentPlaceHolder ID="mainContent" runat="server" >
+                    </asp:ContentPlaceHolder>
+					
+					
+					
+					
+					
+					
+					<div class="button_sliding_bg">Find out more</div>
+					
+						<!--
+				<div class="ContactUs_Button" id="contactUs_Button_Opener"><img alt="Find out more button" border="0" dialog="" id="contactPopupImg" src="https://sandbox.esdm.co.uk/Data/SiteImages/contact_us.png" title="Contact Us" />&nbsp;</div>  -->
+
+<div id="dialog" title="Contact Us"></div>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+					
+                </asp:Panel>
+                <asp:Panel ID="divRight" runat="server" Visible="True" CssClass="rightside" SkinID="pnlPlain">
+                    <asp:ContentPlaceHolder ID="rightContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </asp:Panel>
+                <%if (Request.RawUrl.ToLower() != "/" && Request.RawUrl.ToLower() != "/home")
+      {%>
+            </div>
+            <%}%>
+        </div>
+				
+			  <footer>
+<div class="inner-container">
+<div class="box_onethird"><portal:SkinFolderImage ID="exeGesISFooterLogo" runat="server" ImageFileName="images/logo_exegesis.png" AlternateText=" " /></div>
+
+
+
+<div id="firstFooterLinkBox" class="box_onethird" >
+<h4>Our Services</h4>
+
+<ul>
+	<li><asp:HyperLink ID="lnkSoftware" runat="server" NavigateUrl="~/software" Text="Software" /></li>
+	<li><asp:HyperLink ID="lnkService" runat="server" NavigateUrl="~/services" Text="Services" /></li>
+	<li><asp:HyperLink ID="lnkGISConsultancy" runat="server" NavigateUrl="~/gis-consultancy" Text="GIS Consultancy" /></li>
+	<li><asp:HyperLink ID="lnkApplicationDevelopment" runat="server" NavigateUrl="~/application-development" Text="Application Development" /></li>
+	<li><asp:HyperLink ID="lnkMojoportalCMS" runat="server" NavigateUrl="~/mojoportal-cms-web-sites" Text="CMS Web Sites" /></li>
+	<li><asp:HyperLink ID="lnkWebMapping" runat="server" NavigateUrl="~/web-mapping" Text="Web Mapping" /></li>
+</ul>
+</div>
+
+<div class="box_onethird">
+<h4>Site Features</h4>
+
+<ul>
+	<portal:SiteMapLink id="SiteMapLink1" runat="server" CssClass="sitemaplink" RenderAsListItem="true" /> 
+	<li><portal:SkinPreview id="SkinPreview1" runat="server" RenderAsListItem="true"></portal:SkinPreview></li>
+	<li><asp:HyperLink ID="lnkContact" runat="server" NavigateUrl="~/Contact" Text="Contact" /></li>
+
+</ul>
+</div>
+
+<div class="box_onethird">
+<h4>User Functions</h4>
+
+<ul>
+	<portal:loginlink id="LoginLink_Footer" runat="server" RenderAsListItem="true" />
+	<portal:homelink id="HomeLink_Footer" runat="server" RenderAsListItem="true" />
+	<portal:userprofilelink id="UserProfileLink_Footer" runat="server" RenderAsListItem="true" />
+	<portal:mailboxlink id="MailboxLink_Footer" runat="server" RenderAsListItem="true" linkonly="false"  />
+	<portal:memberlistlink id="MemberListLink_Footer" runat="server" RenderAsListItem="true" />
+    <portal:registerlink id="RegisterLink_Footer" runat="server" RenderAsListItem="true" />
+    <portal:logoutlink id="LogoutLink_Footer" runat="server" RenderAsListItem="true"  />
+</ul>
+</div>
+
+<div class="clear">&nbsp;</div>
+</div>
+
+<div class="copyright">
+<div class="inner-container" style="margin:auto; width:75%; text-align:center"><span>&copy; exeGesIS Spatial Data Management Ltd. Company No: 3743089. Registered in England and Wales.</span>
+
+
+</div>
+</div>
+</footer>
+
+				<div class="navigation">
+					<portal:SearchInput id="SearchInputBox1" runat="server" 
+						LinkOnly="false"
+						RenderAsListItem="false"
+						ButtonCssClass="glyphicon btn btn-primary btn-search"
+						TextboxCssClass="search-box"
+						OverrideWatermark="Search..."
+						OverrideButtonText="&#xe003;"
+						UseHeading="false"
+						HideOnLoginPage="false"
+						HideOnPasswordRecoveryPage="false"
+						HideOnRegistrationPage="false"
+						HideOnSearchResultsPage="false"
+						HideOnSiteSettingsPage="false"
+					/>
+					
+					<nav class="menu-control" role="navigation">
+						<mkp:MobileMenu runat="server"
+								UlCssClass="ui-accordion ui-widget ui-helper-reset ui-accordion-icons" 
+								LiActiveCssClass="ui-accordion-header ui-helper-reset ui-state-default ui-state-active ui-corner-all" 
+								LiCurrentCssClass="ui-accordion-header ui-helper-reset ui-state-default ui-state-active ui-corner-all" 
+								LiNormalCssClass="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all" 
+								GoBackToCurrentSpanCssClass="ui-icon ui-icon-circle-arrow-s" 
+								GoUpSpanCssClass="ui-icon ui-icon-circle-arrow-n" 
+								CurrentPageSpanCssClass="ui-icon ui-icon-triangle-1-e" 
+								OtherPageSpanCssClass="ui-icon ui-icon-triangle-1-e" 
+						/> 
+					</nav>
+				</div>
+				
+				
+				<div class="admin-tools">
+					<div class="container">
+						<asp:LoginView id="lv1" runat="server">
+							<LoggedInTemplate>
+								<div class="media">
+									<div class="pull-left">
+										<portal:Avatar id="avatar1" runat="server" AutoConfigure="true" DisableUseLinkWithAutoConfigure="false" CssClass="img-thumbnail" />
+									</div>
+									<div class="media-body">
+										<portal:WelcomeMessage id="WelcomeMessage" runat="server" CssClass="accountname" RenderAsListItem="false" OverrideFormat="Hi, <span class='account'>{0}</span>" />
+									</div>
+								</div>
+			    			</LoggedInTemplate>
+						</asp:LoginView>
+						<ul class="admin-links nav nav-pills nav-stacked">
+							<portal:UserProfileLink id="UserProfileLink" runat="server" CssClass="myprofilelink" RenderAsListItem="true" OverrideFormat="Profile" />
+		<!-- CUSTOM LINK FOR LOGGING QUOTE/ORDER -->
+     <asp:LoginView runat="server">  
+      <RoleGroups>
+       <asp:RoleGroup Roles="Admins,ESDM Staff Content Admin,ESDM Staff Read Only,ESDM Staff Site Administrators">
+        <ContentTemplate>    
+         <li class="myprofilelink">
+          <asp:HyperLink runat="server" ID="LogQuoteLink" CssClass="sitelink" NavigateUrl="~/log-a-quote-or-order" Text="Log Quote/Order"></asp:HyperLink>    
+         </li>                        
+        </ContentTemplate>
+       </asp:RoleGroup>
+      </RoleGroups>     
+     </asp:LoginView>
+							<portal:MemberListLink id="MemberListLink" runat="server" CssClass="memberlistlink" RenderAsListItem="true" />
+							<portal:AdminMenuLink id="lnkAdminMenu" runat="server" RenderAsListItem="true" />
+							<portal:FileManagerLink id="lnkFileManager" runat="server" RenderAsListItem="true" />
+							<portal:NewPageLink id="lnkNewPage" runat="server" RenderAsListItem="true" />
+							<portal:PageEditFeaturesLink id="lnkPageContent" runat="server" RenderAsListItem="true" />
+							<portal:PageEditSettingsLink id="lnkPageSettings" runat="server" RenderAsListItem="true" />
+							<portal:LoginLink id="LoginLink" runat="server" CssClass=" " RenderAsListItem="true" OverrideText="Log In" />
+							<portal:LogoutLink id="LogoutLink" runat="server" CssClass="logoutlink" RenderAsListItem="true" />
+							<!-- <portal:RegisterLink id="RegisterLink" runat="server" CssClass=" " RenderAsListItem="true" /> -->
+							<portal:MobileSkinLink ID="mobileskin" runat="server" RenderAsListItem="true" OvverrideMobileText="Full Site" />
+						</ul>
+						<portal:AutoHidePanel ID="ah1" runat="server" CssClass="workflow">
+							<asp:ContentPlaceHolder ID="pageEditContent" runat="server"></asp:ContentPlaceHolder>
+						</portal:AutoHidePanel>
+					</div>
+				</div>
+
+			
+				
+				
+			</div>
+			
+			
+			<portal:autohidepanel id="ah_Toolbar" runat="server">
+			<div id="toolbarbut"> 
+			<span class="showbar"><a href="#">show bar</a></span>
+			</div>
+			<div id="toolbar"> 
+			<div class="toolbarleft"> 
+			  &nbsp;
+			</div>
+			<div class="toolbarright"> 
+			  <span class="downarr"> 
+			  <a href="#"></a>
+			  </span>
+			  <portal:AdminMenuLink id="lnkAdminMenu_Toolbar" runat="server" />
+			  <a href="#" rel="nofollow" class="adminlink" id="togglemodulelinks">Toggle Edit Links</a>
+			  <portal:FileManagerLink id="toolbarright_Toolbar" runat="server" />
+			  <portal:NewPageLink id="lnkNewPage_Toolbar" runat="server" />
+			  <portal:PageEditFeaturesLink id="lnkPageContent_Toolbar" runat="server" />
+			  <portal:PageEditSettingsLink id="lnkPageSettings_Toolbar" runat="server" />
+			  <asp:ContentPlaceHolder ID="pageEditContent_Toolbar" runat="server"></asp:ContentPlaceHolder>
+			  
+			</div>
+			</div>
+			</portal:autohidepanel>
+						
+			
+			<portal:SkinFolderScript ID="MainJS" runat="server" ScriptFileName="js/main.js" IsStartup="true" />
+		</form>
+		
+		<script>
+			function search(e) {
+				if (e.keyCode == 13) {
+					var tb = document.getElementById("txtsearch");
+					if (tb.value != '') {
+						window.location.href = "/SearchResults.aspx?q=" + tb.value;
+					}
+					return false;
+				}
+			}
+			
+			
+			// Initialize dialog
+			$("#dialog").dialog({
+				modal: true,
+				autoOpen: false,
+				dialogClass: 'success-dialog',
+				open: function() {
+					$('.ui-widget-overlay').addClass('custom-overlay');
+				},
+				close: function() {
+					$('.ui-widget-overlay').removeClass('custom-overlay');
+				},            
+				show: {
+					 },
+				hide: {
+				   }
+			});
+			// Get the Sidebar contact info
+			var dialogContent = $(".contactPopup").html();
+
+			 if (typeof dialogContent == 'undefined') { 
+				  $('.button_sliding_bg').css('display','none');
+				  $('.button_sliding_bg').css('position','');
+			 }
+			 else {
+				$('.button_sliding_bg').css('display','block');
+			    $('.button_sliding_bg').css('position','fixed');
+			 }
+
+			// Add the sidebar contact info to the sidebar
+			$("#dialog").html(dialogContent);
+
+			// Open it when #opener is clicked
+			$(".button_sliding_bg").click(function () {
+				$("#dialog").dialog("open");
+			});
+
+		</script>
+		
+		<portal:Woopra ID="woopra11" runat="server" />
+		<portal:AnalyticsAsyncBottomScript ID="analyticsBottom" runat="server" />
+	</body>
+</html>
