@@ -32,6 +32,7 @@ div.sitemap ul,div.sitemap ul li{font-size:100%;list-style:none}
 
 .contactUs_Button {
     cursor: pointer;
+    cursor: hand;
     overflow: hidden;
     position: fixed;
     display: block;
@@ -50,7 +51,9 @@ div.sitemap ul,div.sitemap ul li{font-size:100%;list-style:none}
 
 
 #contactPopupImg {
+	
 	cursor: pointer;
+    cursor: hand;
     overflow: hidden;
     position: fixed;
     display: block;
@@ -94,6 +97,8 @@ div.sitemap ul,div.sitemap ul li{font-size:100%;list-style:none}
 	-webkit-transition: all ease 0.8s;
 	-moz-transition: all ease 0.8s;
 	transition: all ease 0.8s;
+	
+    cursor: hand;
     overflow: hidden;
     position: fixed;
     /*display: block;*/
@@ -470,15 +475,7 @@ img{max-width:100%}
 .inner-container-no-padding{max-width:1170px;margin:0 auto;padding:0px 0 0}
 .box_half{width:48%;float:left}
 .text-right{text-align:right}
-.clr_seperator{
-	background:#ebacfd;
-	background:-moz-linear-gradient(left,#00f0ff 0%,#ebacfd 100%);
-	background:-webkit-linear-gradient(left,#00f0ff 0%,#ebacfd 100%);
-	background:linear-gradient(to right,#00f0ff 0%,#ebacfd 100%);
-    display:inline-block;
-	height:1px;
-	width:100px
-}
+.clr_seperator{background:#ebacfd;background:-moz-linear-gradient(left,#00f0ff 0%,#ebacfd 100%);background:-webkit-linear-gradient(left,#00f0ff 0%,#ebacfd 100%);background:linear-gradient(to right,#00f0ff 0%,#ebacfd 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#00f0ff',endColorstr='#ebacfd',GradientType=1);display:inline-block;height:1px;width:100px}
 
 
 
@@ -662,8 +659,10 @@ nav.mainnav ul li, nav.subnav ul li{ display:inline }
 }
 
 
-@media screen and (max-width: 5000px) 
+@media screen and (max-width: 5390px) 
 {
+	
+	
 	.blognavright {
 		float: right;
 		width: 25%;
@@ -866,7 +865,7 @@ nav.mainnav ul li, nav.subnav ul li{ display:inline }
 
 @media screen and (max-width: 830px) 
 {
-	.button_sliding_bg { right: 0 }
+	.button_sliding_bg {  right: 0 }
 	
 	#contactUs_Button_Opener{display: inline;}
 	#navbar-menu-button { display: inline; }
