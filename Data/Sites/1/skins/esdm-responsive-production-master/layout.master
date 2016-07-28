@@ -2,18 +2,16 @@
 <%@ Register Namespace="sts.MobileKit.Web" Assembly="sts.MobileKit.Web" TagPrefix="mkp" %>
 <!DOCTYPE html>
 <!--[if IEMobile 7 ]> <html class="html-class no-js iem7"> <![endif]-->
-<!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html class="html-class no-js"> <!--<![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!--> 
+    <html class="html-class no-js" lang="en"> <!--<![endif]-->
 	<head runat="server">
 		<meta charset="utf-8">
 		<title></title>
 
         <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
-
-		<portal:MetaContent ID="MetaContent" runat="server" PreZoomForIPhone="false" />
 		<meta name="HandheldFriendly" content="True">
 		<meta name="MobileOptimized" content="360">
 		<meta name="viewport" content="width=360">
-		<meta http-equiv="cleartype" content="on">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 		
@@ -37,12 +35,16 @@
 		<link rel="stylesheet" type="text/css" href="stylemenu.css">
 		
 		
-		<script src="js/modernizr.min.js"></script>
-		<portal:StyleSheetCombiner id="StyleSheetCombiner" DisableCssHandler="true" runat="server" IncludeJQueryUI="false" UseIconsForAdminLinks="false" EnableNonClickablePageLinks="true" QtFileCssIsInMainCss="false" />
+		<!-- <script src="js/modernizr.min.js"></script> -->
+		
+		
+		
+		
+		<portal:StyleSheetCombiner id="StyleSheetCombiner" DisableCssHandler="false" runat="server" IncludeJQueryUI="false" UseIconsForAdminLinks="false" EnableNonClickablePageLinks="true" QtFileCssIsInMainCss="false" />
 		<portal:ScriptLoader id="ScriptLoader1" runat="server" LoadSkinCss="false" IncludeSimpleFaq="false" IncludeJQuery="false" includejQueryUICore="false" includejQueryAccordion="false" jQueryAccordionNoHeightConfig="{}" UseMobileVersionOfFlickrGallery="true" RenderjQueryInHead="false" AssumejQueryIsLoaded="true" AssumejQueryUiIsLoaded="true" AssumeMarkitupIsLoaded="true" AssumeMojoCombinedIsLoaded="false" RenderCombinedInHead="true" CombineScriptsWithScriptManager="true" IncludeColorBox="false" AutoWireJQueryUITooltip="false" />
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script> 
 	</head>
 	<!-- IMPORTANT DO NOT REMOVE 'ismobile' css class as this is used as a mobile test in some js-->
 	<body class="page-body" runat="server">
@@ -63,7 +65,7 @@
 				
 					
                 <%--********** HEADER **********--%>
-                <header class="head" role="banner">
+                <header class="head">
 				
 				<!-- START Header Container -->
 				   <div class="header_container">
@@ -255,7 +257,7 @@
 						ButtonCssClass="glyphicon btn btn-primary btn-search"
 						TextboxCssClass="search-box"
 						OverrideWatermark="Search..."
-						OverrideButtonText="&#xe003;"
+						OverrideButtonText=""
 						UseHeading="false"
 						HideOnLoginPage="false"
 						HideOnPasswordRecoveryPage="false"
@@ -264,7 +266,7 @@
 						HideOnSiteSettingsPage="false"
 					/>
 					
-					<nav class="menu-control" role="navigation">
+					<nav class="menu-control">
 						<mkp:MobileMenu runat="server"
 								UlCssClass="ui-accordion ui-widget ui-helper-reset ui-accordion-icons" 
 								LiActiveCssClass="ui-accordion-header ui-helper-reset ui-state-default ui-state-active ui-corner-all" 

@@ -88,7 +88,7 @@
 }
 .ui-draggable-handle {
 	-ms-touch-action: none;
-	
+	touch-action: none;
 }
 .ui-resizable {
 	position: relative;
@@ -98,6 +98,7 @@
 	font-size: 0.1px;
 	display: block;
 	-ms-touch-action: none;
+	touch-action: none;
 }
 .ui-resizable-disabled .ui-resizable-handle,
 .ui-resizable-autohide .ui-resizable-handle {
@@ -161,6 +162,7 @@
 }
 .ui-selectable {
 	-ms-touch-action: none;
+	touch-action: none;
 }
 .ui-selectable-helper {
 	position: absolute;
@@ -169,6 +171,7 @@
 }
 .ui-sortable-handle {
 	-ms-touch-action: none;
+	touch-action: none;
 }
 .ui-accordion .ui-accordion-header {
 	display: block;
@@ -177,7 +180,7 @@
 	margin: 2px 0 0 0;
 	padding: .5em .5em .5em .7em;
 	min-height: 0; /* support: IE7 */
-	/*font-size: 100%;*/
+	font-size: 100%;
 }
 .ui-accordion .ui-accordion-icons {
 	padding-left: 2.2em;
@@ -353,7 +356,7 @@ button.ui-button::-moz-focus-inner {
 	text-align: center;
 }
 .ui-datepicker .ui-datepicker-title select {
-	/*font-size: 1em;*/
+	font-size: 1em;
 	margin: 1px 0;
 }
 .ui-datepicker select.ui-datepicker-month,
@@ -362,7 +365,7 @@ button.ui-button::-moz-focus-inner {
 }
 .ui-datepicker table {
 	width: 100%;
-	/*font-size: .9em;*/
+	font-size: .9em;
 	border-collapse: collapse;
 	margin: 0 0 .4em;
 }
@@ -617,7 +620,7 @@ button.ui-button::-moz-focus-inner {
 	padding-bottom: 1px;
 }
 .ui-selectmenu-menu .ui-menu .ui-selectmenu-optgroup {
-	/*font-size: 1em;*/
+	font-size: 1em;
 	font-weight: bold;
 	line-height: 1.5;
 	padding: 2px 0.4em;
@@ -662,11 +665,12 @@ button.ui-button::-moz-focus-inner {
 	height: 1.2em;
 	cursor: default;
 	-ms-touch-action: none;
+	touch-action: none;
 }
 .ui-slider .ui-slider-range {
 	position: absolute;
 	z-index: 1;
-	/*font-size: .7em;*/
+	font-size: .7em;
 	display: block;
 	border: 0;
 	background-position: 0 0;
@@ -735,7 +739,7 @@ button.ui-button::-moz-focus-inner {
 .ui-spinner-button {
 	width: 16px;
 	height: 50%;
-	/*font-size: .5em;*/
+	font-size: .5em;
 	padding: 0;
 	margin: 0;
 	text-align: center;
@@ -826,22 +830,22 @@ body .ui-tooltip {
 /* Component containers
 ----------------------------------*/
 .ui-widget {
-	font-family: "Open Sans", sans-serif;
-	/*font-size: 1.2em;*/
+	font-family: "Lucida Grande","Lucida Sans Unicode", Helvetica, Arial, Lucida, Verdana, sans-serif;;
+	font-size: 1.2em;
 }
 .ui-widget .ui-widget {
-	/*font-size: 1em;*/
+	font-size: 1em;
 }
 .ui-widget input,
 .ui-widget select,
 .ui-widget textarea,
 .ui-widget button {
-	font-family: "Open Sans", sans-serif;
-	/*font-size: 1em;*/
+	font-family: "Lucida Grande","Lucida Sans Unicode", Helvetica, Arial, Lucida, Verdana, sans-serif;;
+	font-size: 1em;
 }
 .ui-widget-content {
 	border: 1px solid #C8C8C8;
-	background: #FFFFFF url("jquery-ui-1.11.2.custom/images/ui-bg_flat_100_FFFFFF_40x100.png") 50% 50% repeat-x;
+	background: #FFFFFF url("images/ui-bg_flat_100_FFFFFF_40x100.png") 50% 50% repeat-x;
 	color: #3F3F3F;
 }
 .ui-widget-content a {
@@ -849,7 +853,7 @@ body .ui-tooltip {
 }
 .ui-widget-header {
 	border: 1px solid #C8C8C8;
-	background: #F2F2F2 url("jquery-ui-1.11.2.custom/images/ui-bg_highlight-hard_100_F2F2F2_1x100.png") 50% 50% repeat-x;
+	background: #F2F2F2 url("images/ui-bg_highlight-hard_100_F2F2F2_1x100.png") 50% 50% repeat-x;
 	color: #00A946;
 	font-weight: bold;
 }
@@ -863,7 +867,7 @@ body .ui-tooltip {
 .ui-widget-content .ui-state-default,
 .ui-widget-header .ui-state-default {
 	border: 1px solid #C8C8C8;
-	background: #E3E5DB url("jquery-ui-1.11.2.custom/images/ui-bg_highlight-soft_100_E3E5DB_1x100.png") 50% 50% repeat-x;
+	background: #E3E5DB url("images/ui-bg_highlight-soft_100_E3E5DB_1x100.png") 50% 50% repeat-x;
 	font-weight: normal;
 	color: #3F3F3F;
 }
@@ -880,7 +884,7 @@ body .ui-tooltip {
 .ui-widget-content .ui-state-focus,
 .ui-widget-header .ui-state-focus {
 	border: 1px solid #C8C8C8;
-	background: #DCE2C3 url("jquery-ui-1.11.2.custom/images/ui-bg_highlight-soft_100_DCE2C3_1x100.png") 50% 50% repeat-x;
+	background: #DCE2C3 url("images/ui-bg_highlight-soft_100_DCE2C3_1x100.png") 50% 50% repeat-x;
 	font-weight: normal;
 	color: #3F3F3F;
 }
@@ -899,7 +903,7 @@ body .ui-tooltip {
 .ui-widget-content .ui-state-active,
 .ui-widget-header .ui-state-active {
 	border: 1px solid #C8C8C8;
-	background: #D6E0AC url("jquery-ui-1.11.2.custom/images/ui-bg_highlight-soft_100_D6E0AC_1x100.png") 50% 50% repeat-x;
+	background: #D6E0AC url("images/ui-bg_highlight-soft_100_D6E0AC_1x100.png") 50% 50% repeat-x;
 	font-weight: normal;
 	color: #00A946;
 }
@@ -916,7 +920,7 @@ body .ui-tooltip {
 .ui-widget-content .ui-state-highlight,
 .ui-widget-header .ui-state-highlight {
 	border: 1px solid #00A946;
-	background: #D6E0AC url("jquery-ui-1.11.2.custom/images/ui-bg_glass_55_D6E0AC_1x400.png") 50% 50% repeat-x;
+	background: #D6E0AC url("images/ui-bg_glass_55_D6E0AC_1x400.png") 50% 50% repeat-x;
 	color: #00A946;
 }
 .ui-state-highlight a,
@@ -928,7 +932,7 @@ body .ui-tooltip {
 .ui-widget-content .ui-state-error,
 .ui-widget-header .ui-state-error {
 	border: 1px solid #cd0a0a;
-	background: #db2627 url("jquery-ui-1.11.2.custom/images/ui-bg_highlight-soft_20_db2627_1x100.png") 50% top repeat-x;
+	background: #db2627 url("images/ui-bg_highlight-soft_20_db2627_1x100.png") 50% top repeat-x;
 	color: #ffffff;
 }
 .ui-state-error a,
@@ -974,27 +978,27 @@ body .ui-tooltip {
 }
 .ui-icon,
 .ui-widget-content .ui-icon {
-	background-image: url("jquery-ui-1.11.2.custom/images/ui-icons_3F3F3F_256x240.png");
+	background-image: url("images/ui-icons_3F3F3F_256x240.png");
 }
 .ui-widget-header .ui-icon {
-	background-image: url("jquery-ui-1.11.2.custom/images/ui-icons_00A946_256x240.png");
+	background-image: url("images/ui-icons_00A946_256x240.png");
 }
 .ui-state-default .ui-icon {
-	background-image: url("jquery-ui-1.11.2.custom/images/ui-icons_3F3F3F_256x240.png");
+	background-image: url("images/ui-icons_3F3F3F_256x240.png");
 }
 .ui-state-hover .ui-icon,
 .ui-state-focus .ui-icon {
-	background-image: url("jquery-ui-1.11.2.custom/images/ui-icons_3F3F3F_256x240.png");
+	background-image: url("images/ui-icons_3F3F3F_256x240.png");
 }
 .ui-state-active .ui-icon {
-	background-image: url("jquery-ui-1.11.2.custom/images/ui-icons_00A946_256x240.png");
+	background-image: url("images/ui-icons_00A946_256x240.png");
 }
 .ui-state-highlight .ui-icon {
-	background-image: url("jquery-ui-1.11.2.custom/images/ui-icons_00A946_256x240.png");
+	background-image: url("images/ui-icons_00A946_256x240.png");
 }
 .ui-state-error .ui-icon,
 .ui-state-error-text .ui-icon {
-	background-image: url("jquery-ui-1.11.2.custom/images/ui-icons_fcd113_256x240.png");
+	background-image: url("images/ui-icons_fcd113_256x240.png");
 }
 
 /* positioning */
@@ -1207,14 +1211,14 @@ body .ui-tooltip {
 
 /* Overlays */
 .ui-widget-overlay {
-	background: #F2F2F2 url("jquery-ui-1.11.2.custom/images/ui-bg_flat_100_F2F2F2_40x100.png") 50% 50% repeat-x;
+	background: #F2F2F2 url("images/ui-bg_flat_100_F2F2F2_40x100.png") 50% 50% repeat-x;
 	opacity: .3;
 	filter: Alpha(Opacity=30); /* support: IE8 */
 }
 .ui-widget-shadow {
 	margin: 5px 0 0 5px;
 	padding: 0px;
-	background: #C8C8C8 url("jquery-ui-1.11.2.custom/images/ui-bg_flat_55_C8C8C8_40x100.png") 50% 50% repeat-x;
+	background: #C8C8C8 url("images/ui-bg_flat_55_C8C8C8_40x100.png") 50% 50% repeat-x;
 	opacity: .5;
 	filter: Alpha(Opacity=50); /* support: IE8 */
 	border-radius: 5px;

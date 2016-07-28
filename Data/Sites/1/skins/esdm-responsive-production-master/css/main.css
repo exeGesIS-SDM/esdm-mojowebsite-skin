@@ -797,15 +797,8 @@ table td[class*=col-], table th[class*=col-] {
 .modulecontent  .bxslider .btn_black:hover{ border:0px; background:rgba(0,0,0,1);}
 				.modulecontent, .panelwrapper, .htmlmodule, #wrapcenter { margin:0; padding:0;}
 				.box_onethird { padding-bottom:25px !important; text-align:center;}
-				.taketour-container{ /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eef3f8+0,dee7ef+100 */
-										background: #eef3f8; /* Old browsers */
-										background: -moz-linear-gradient(left,  #eef3f8 0%, #dee7ef 100%); /* FF3.6-15 */
-										background: -webkit-linear-gradient(left,  #eef3f8 0%,#dee7ef 100%); /* Chrome10-25,Safari5.1-6 */
-										background: linear-gradient(to right,  #eef3f8 0%,#dee7ef 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-										filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eef3f8', endColorstr='#dee7ef',GradientType=1 ); /* IE6-9 */
-										padding:15px;
-										}
-				.taketour-container .box_half img{ max-width:50%;}
+
+
 				.video-container{ text-align:center; background: url(images/img_videobg.jpg) center repeat; background-size:cover; height:210px; margin-bottom:35px; }
 				.video-container .inner-container { padding:25px 0;}
 				.video-container h4{color:#ffffff; font-family: 'open_sanslight', Arial; line-height:normal; } 
@@ -893,7 +886,7 @@ input[type=search] {
 
 input[type=checkbox], input[type=radio] {
     margin: 4px 0 0;
-    margin-top: 1px \9;
+    margin-top: 1px;
     line-height: normal;
 }
 
@@ -1250,7 +1243,6 @@ select[multiple].input-lg, textarea.input-lg {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none;
 }
 
     .btn.active:focus, .btn:active:focus, .btn:focus {
@@ -1273,7 +1265,6 @@ select[multiple].input-lg, textarea.input-lg {
 
     .btn.disabled, .btn[disabled], fieldset[disabled] .btn {
         cursor: not-allowed;
-        pointer-events: none;
         opacity: .65;
         filter: alpha(opacity=65);
         -webkit-box-shadow: none;
@@ -3301,7 +3292,7 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    felx-directrion: column;
+    flex-direction: column;
 }
 
 .page-body {
