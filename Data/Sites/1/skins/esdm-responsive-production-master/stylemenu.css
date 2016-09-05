@@ -68,13 +68,13 @@ div.AspNet-Menu-Horizontal ul li.static a
 }
 
 
-div.AspNet-Menu-Horizontal ul li.static.AspNet-Menu-SelectedLeaf a { font-family: 'open_sansbold', arial; }
+/* div.AspNet-Menu-Horizontal ul li.static.AspNet-Menu-SelectedLeaf a { font-family: 'open_sansbold', arial; } */
 div.AspNet-Menu-Horizontal ul li:last-child a { padding-right:0 !important;}
 
 
 div.AspNet-Menu-Horizontal ul.AspNet-Menu li.AspNet-Menu-SelectedWithChildren a.AspNet-Menu,
- div.AspNet-Menu-Horizontal ul.AspNet-Menu li.AspNet-Menu-SelectedLeaf a.AspNet-Menu,
- div.AspNet-Menu-Horizontal ul.AspNet-Menu li.AspNet-Menu-Leaf a.AspNet-Menu:hover, div.AspNet-Menu-Horizontal ul.static a:hover {
+div.AspNet-Menu-Horizontal ul.AspNet-Menu li.AspNet-Menu-SelectedLeaf a.AspNet-Menu,
+div.AspNet-Menu-Horizontal ul.AspNet-Menu li.AspNet-Menu-Leaf a.AspNet-Menu:hover, div.AspNet-Menu-Horizontal ul.static a:hover {
     color: #00a946;
 }
 
