@@ -1357,3 +1357,22 @@ div.AspNet-Menu-Horizontal > ul.AspNet-Menu > li:first-child
 
 
 
+/* Admin menu */
+div.adminmenu {  }
+div.adminmenu ul.simplelist { margin: 0 0 1em -20px; }
+div.adminmenu ul.simplelist li { float: left; display: block; background-image:none; }
+div.adminmenu ul.simplelist li a {
+    line-height: 1em;
+    display: block;
+    width: 140px  !important;
+    height: 40px  !important;
+    float: left;
+    padding: 90px 0px 60px 10px !important;
+    margin: 5px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+
+
