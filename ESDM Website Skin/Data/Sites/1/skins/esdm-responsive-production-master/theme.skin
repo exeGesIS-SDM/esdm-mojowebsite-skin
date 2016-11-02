@@ -1,0 +1,187 @@
+<%@ Register Namespace="mojoPortal.Web.UI" Assembly="mojoPortal.Web" TagPrefix="portal" %>
+<%@ Register Namespace="mojoPortal.Web.Controls" Assembly="mojoPortal.Web.Controls" TagPrefix="mp" %>
+<%@ Register Namespace="mojoPortal.Web.ContentUI" Assembly="mojoPortal.Web" TagPrefix="html" %>
+<%@ Register Namespace="mojoPortal.Web.BlogUI" Assembly="mojoPortal.Features.UI" TagPrefix="blog" %>
+<%@ Register Namespace="mojoPortal.Web.ForumUI" Assembly="mojoPortal.Features.UI" TagPrefix="forum" %>
+<%@ Register Namespace="mojoPortal.Web.FeedUI" Assembly="mojoPortal.Features.UI" TagPrefix="feed" %>
+<%@ Register Namespace="mojoPortal.Web.SharedFilesUI" Assembly="mojoPortal.Features.UI" TagPrefix="sf" %>
+<%@ Register TagPrefix="portal" TagName="ChildPagesSiteMap" Src="~/Controls/ChildPageMenu.ascx" %>
+<%@ Register TagPrefix="portal" TagName="mojoRating" Src="~/Controls/mojoRating.ascx" %>
+
+<%@ Register Namespace="sts.MobileKit.Web" Assembly="sts.MobileKit.Web" TagPrefix="mkp" %>
+
+<asp:CheckBoxList  runat="server"
+                   SkinID="CBL"    
+                   CssClass="CheckBoxList"                   
+                   RepeatLayout="UnorderedList"></asp:CheckBoxList>
+
+
+<mkp:MobileMenu runat="server"
+	UlCssClass="main-nav nav nav-pills nav-stacked" 
+	LiActiveCssClass="" 
+	LiCurrentCssClass="active" 
+	LiNormalCssClass="" 
+	GoBackToCurrentSpanCssClass="main-nav-icon glyphicon glyphicon-chevron-down" 
+	GoUpSpanCssClass="main-nav-icon glyphicon glyphicon-chevron-left" 
+	CurrentPageSpanCssClass="main-nav-icon glyphicon glyphicon-star" 
+	OtherPageSpanCssClass="main-nav-icon glyphicon glyphicon-chevron-right"></mkp:MobileMenu>
+
+<portal:mojoButton runat="server" UsejQueryButton="true"  />
+
+	<asp:CreateUserWizard runat="server" 
+			CreateUserButtonStyle-CssClass="jqbutton ui-button ui-widget ui-state-default ui-corner-all" 
+			ContinueButtonStyle-CssClass="jqbutton ui-button ui-widget ui-state-default ui-corner-all"  
+			FinishCompleteButtonStyle-CssClass="jqbutton ui-button ui-widget ui-state-default ui-corner-all"
+			StartNextButtonStyle-CssClass="jqbutton ui-button ui-widget ui-state-default ui-corner-all"
+			/>
+
+<asp:Panel  runat="server" SkinID="ModuleWrapper"
+        CssClass="panelwrapper"
+         />  
+
+     <mp:CornerRounderTop runat="server"
+        DoRounding="true"
+        />
+        
+     <mp:CornerRounderBottom runat="server"
+        DoRounding="true"
+        />
+		
+		<%-- this clears hard coded style from validators --%>
+		<asp:ValidationSummary runat="server" ForeColor="" CssClass="txterror" />
+		<asp:RangeValidator runat="server" ForeColor="" CssClass="txterror" />
+		<asp:RequiredFieldValidator runat="server" ForeColor="" CssClass="txterror" />
+		<asp:RegularExpressionValidator runat="server" ForeColor="" CssClass="txterror" />
+		<asp:CompareValidator runat="server" ForeColor="" CssClass="txterror" />
+		<asp:CustomValidator runat="server" ForeColor="" CssClass="txterror" />
+		
+		<portal:mojoTreeView runat="server" SkinID="SiteMapPage"
+			ContainerCssClass="sitemap"
+			RootUlCssClass=""
+			RenderLiCssClasses="false"
+			RenderAnchorCss="true"
+			LiCssClass=""
+			LiRootExpandableCssClass=""
+			LiRootNonExpandableCssClass=""
+			LiNonRootExpnadableCssClass=""
+			LiSelectedCssClass=""
+			LiChildSelectedCssClass=""
+			LiParentSelectedCssClass=""
+			AnchorCssClass=""
+			AnchorSelectedCssClass=""
+			ExpandDepth="-1"
+			ShowExpandCollapse="false"
+			PopulateNodesFromClient="false"
+		
+		/>
+		
+		<portal:mojoTreeView runat="server" SkinID="ChildSiteMap"
+			ContainerCssClass="sitemap"
+			RootUlCssClass=""
+			RenderLiCssClasses="false"
+			RenderAnchorCss="true"
+			LiCssClass=""
+			LiRootExpandableCssClass=""
+			LiRootNonExpandableCssClass=""
+			LiNonRootExpnadableCssClass=""
+			LiSelectedCssClass=""
+			LiChildSelectedCssClass=""
+			LiParentSelectedCssClass=""
+			AnchorCssClass=""
+			AnchorSelectedCssClass=""
+			ExpandDepth="-1"
+			ShowExpandCollapse="false"
+			PopulateNodesFromClient="false"
+		
+		/>
+
+       
+       <asp:CheckBoxList  runat="server"
+       CssClass="aspcheckboxlist"
+       RepeatColumns="2"
+       RepeatDirection="horizontal"
+       RepeatLayout="Table"
+
+       />
+       
+       <asp:CheckBoxList  runat="server" SkinID="Roles"
+       CssClass="aspcheckboxlist"
+       RepeatColumns="2"
+       RepeatDirection="horizontal"
+       RepeatLayout="Table"
+       
+       />
+       
+       <asp:CheckBoxList  runat="server" SkinID="Blog"
+       CssClass="aspcheckboxlist"
+       RepeatColumns="4"
+       RepeatDirection="horizontal"
+       RepeatLayout="Table"
+       
+       />
+
+     <asp:Calendar  runat="server"
+     CaptionAlign="Top"
+     CssClass="aspcalendarmain"
+     DayHeaderStyle-CssClass="aspcalendardayheader"
+     DayNameFormat="FirstLetter"
+     DayStyle-CssClass="aspcalendarday"
+     FirstDayOfWeek="sunday"
+     NextMonthText="+"
+     NextPrevFormat="CustomText"
+     NextPrevStyle-CssClass="aspcalendarnextprevious"
+     OtherMonthDayStyle-CssClass="aspcalendarothermonth"
+     PrevMonthText="-"
+     SelectedDayStyle-CssClass="aspcalendarselectedday"
+     SelectorStyle-CssClass="aspcalendarselector"
+     ShowDayHeader="true"
+     ShowGridLines="false"
+     ShowNextPrevMonth="true"
+     ShowTitle="true"
+     TitleFormat="MonthYear"
+     TitleStyle-CssClass="aspcalendartitle"
+     TodayDayStyle-CssClass="aspcalendartoday"
+     WeekendDayStyle-CssClass="aspcalendarweekendday"
+   
+    /> 
+    
+    
+    <%--  this is the EventCalendar  --%>
+    
+    <mp:DataCalendar runat="server"
+     CaptionAlign="Top"
+     CssClass="mpcalendarmain"
+     DayHeaderStyle-CssClass="mpcalendardayheader"
+     DayNameFormat="Short"
+     DayStyle-CssClass="mpcalendarday"
+     FirstDayOfWeek="sunday"
+     NextMonthText="+"
+     NextPrevFormat="CustomText"
+     NextPrevStyle-CssClass="mpcalendarnextprevious"
+     OtherMonthDayStyle-CssClass="mpcalendarothermonth"
+     PrevMonthText="-"
+     SelectedDayStyle-CssClass="mpcalendarselectedday"
+     SelectorStyle-CssClass="mpcalendarselector"
+     ShowDayHeader="true"
+     ShowGridLines="false"
+     ShowNextPrevMonth="true"
+     ShowTitle="true"
+     TitleFormat="MonthYear"
+     TitleStyle-CssClass="mpcalendartitle"
+     TodayDayStyle-CssClass="mpcalendartoday"
+     WeekendDayStyle-CssClass="mpcalendarweekendday"
+   
+    /> 
+    
+<asp:ListBox  runat="server" SkinID="PageTree"
+         CssClass=""
+         Width="400px"
+            
+/>          
+
+
+<portal:SearchPanel  runat="server"
+	Element="div" 
+	CssClass="search-control"
+/>
+
