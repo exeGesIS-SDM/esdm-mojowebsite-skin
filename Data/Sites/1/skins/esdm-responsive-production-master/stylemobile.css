@@ -1545,8 +1545,8 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
 
 @font-face {
     font-family: 'Glyphicons Halflings';
-    src: url(../fonts/glyphicons-halflings-regular.eot);
-    src: url(../fonts/glyphicons-halflings-regular.eot?#iefix) format('embedded-opentype'),url(../fonts/glyphicons-halflings-regular.woff) format('woff'),url(../fonts/glyphicons-halflings-regular.ttf) format('truetype'),url(../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg');
+    src: url(/fonts/glyphicons-halflings-regular.eot);
+    src: url(/fonts/glyphicons-halflings-regular.eot?#iefix) format('embedded-opentype'),url(/fonts/glyphicons-halflings-regular.woff) format('woff'),url(fonts/glyphicons-halflings-regular.ttf) format('truetype'),url(/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg');
 }
 
 .child-page-menu > li > a:before, .glyphicon, .storelink:before, [action*="/Admin/AdminMenu.aspx"] .simplelist > li > a:before {
@@ -1674,6 +1674,7 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
 
 .glyphicon-cog:before {
     content: "\e019";
+    font-size: 19px;
 }
 
 .glyphicon-trash:before {
@@ -3321,26 +3322,6 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .menu-overlay {
     background-color: rgba(0,0,0,.6);
     bottom: 0;
@@ -3472,14 +3453,14 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
 		width: 85%;
 	}
 
-	
-	.search-control .btn-search {
+   .search-control .btn-search {
 		margin-top: -1px;
 		height: 34px;
 		position: absolute;
 		right: 0;
 		top: 1px;
-		width: 65px;
+		font-family: "Open Sans", sans-serif;
+		/*width: 65px;*/
 	}
 	
 	
@@ -3491,17 +3472,6 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
     margin: 4px;
     float: left;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 

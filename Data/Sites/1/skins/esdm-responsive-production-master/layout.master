@@ -7,50 +7,46 @@
 	<head runat="server">
 		<meta charset="utf-8">
 		<title></title>
-
-        <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+		
+		<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
 		<meta name="HandheldFriendly" content="True">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 		
-		<link rel="icon" href="/favicon.ico" />
+		<portal:Favicon id="faviconPortal"  runat="server" />
+		
+		<%-- Android Specific Icons --%>
+		<link rel="icon" href="images/ESDM_logo_128x128.png" />
+		<link rel="icon" href="images/ESDM_logo_192x192.png" />
+		<%-- iOS Touch Icons --%>
+		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/ESDM_logo_152x152.png">
+		<link rel="apple-touch-icon-precomposed" sizes="180x180" href="images/ESDM_logo_180x180.png">
+		<link rel="apple-touch-icon-precomposed" href="images/ESDM_logo_128x128.png">
+		<%-- Windows 8 and above Tile icons --%>
+		<meta name="msapplication-config" content="browserconfig.xml" />
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="images/ESDM_logo_270x270.png">
 
-		<!-- Touch Icons -->
-		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">
-		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
-		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
-		<link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57x57-precomposed.png">
-		<link rel="shortcut icon" href="img/touch/apple-touch-icon.png">
-
-		<!--<link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.min.css">-->
-		
-		
-		<link rel="stylesheet" type="text/css" href="css/main.css">
-		<link rel="stylesheet" type="text/css" href="css/controls.css">
-		<link rel="stylesheet" type="text/css" href="jquery-ui.css">
-		
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<link rel="stylesheet" type="text/css" href="stylemenu.css">
-		
-		
-		<!-- <script src="js/modernizr.min.js"></script> -->
-		
-		
-		
-		
-		<portal:StyleSheetCombiner id="StyleSheetCombiner" DisableCssHandler="false" runat="server" IncludeJQueryUI="false" UseIconsForAdminLinks="false" EnableNonClickablePageLinks="true" QtFileCssIsInMainCss="false" />
+		<%-- MojoPortal Header Elements --%>
+		<%-- MojoPortal StyleSheetCombiner --%>
+		<portal:StyleSheetCombiner id="StyleSheetCombiner" DisableCssHandler="false" runat="server" IncludeJQueryUI="true" UseIconsForAdminLinks="false" EnableNonClickablePageLinks="true" QtFileCssIsInMainCss="false" />
+		<%-- MojoPortal ScriptLoader --%>
 		<portal:ScriptLoader id="ScriptLoader1" runat="server" LoadSkinCss="false" IncludeSimpleFaq="false" IncludeJQuery="false" includejQueryUICore="false" includejQueryAccordion="false" jQueryAccordionNoHeightConfig="{}" UseMobileVersionOfFlickrGallery="true" RenderjQueryInHead="false" AssumejQueryIsLoaded="true" AssumejQueryUiIsLoaded="true" AssumeMarkitupIsLoaded="true" AssumeMojoCombinedIsLoaded="false" RenderCombinedInHead="true" CombineScriptsWithScriptManager="true" IncludeColorBox="false" AutoWireJQueryUITooltip="false" />
-
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+		
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script> 
 		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script> 
+		
+	
+			
 	</head>
-	<!-- IMPORTANT DO NOT REMOVE 'ismobile' css class as this is used as a mobile test in some js-->
+	
+	<%-- BODY --%>
 	<body class="page-body" runat="server">
 		<portal:AnalyticsAsyncTopScript id="analyticsTop" runat="server" />
 		<portal:LayoutDisplaySettings id="LayoutDisplaySettings1" runat="server" />
 		<form class="form" id="frmMain" runat="server">	
 			<asp:ScriptManager ID="ScriptManager1" EnablePageMethods="true" runat="server" />
-			<portal:SkinFolderScript ID="sfs1" runat="server" ScriptFileName="skinscript.js" AddToCombinedScript="true" />
+			<portal:SkinFolderScript ID="sfs1" runat="server" ScriptFileName="js/toogleEditLinks.js" AddToCombinedScript="true" />
 			<asp:UpdatePanel runat="server" ID="UPDJavascript">
 				<ContentTemplate>			
 				</ContentTemplate>
@@ -61,12 +57,12 @@
 			<asp:SiteMapDataSource ID="ChildPageSiteMapData" runat="server" ShowStartingNode="false" />
 			<div class="site-wrap">
 				
-					
-                <%--********** HEADER **********--%>
+                <%-- HEADER --%>
                 <header class="head">
 				
-				<!-- START Header Container -->
+				   <%-- START Header Container --%>
 				   <div class="header_container">
+				   
 					    <div class="header_content">
 						
 							<div class="navbar-inverse navbar-static-top">
@@ -84,13 +80,10 @@
 										</div>
 										
 										<div class="mobileHeaderCenterContainer">
-										
 											<a id="hlLogo" href="/home">
 													<div id="mobileLogoContainer"></div>
 											</a>
-										
 										</div>
-										
 										
 										<div class="mobileHeaderSideContainer ">
 										
@@ -106,10 +99,10 @@
 							</div>
 					
 					
-					<!-- START SITE Horizontal Nav -->
+					<%-- START SITE Horizontal Nav --%>
 					<div id="siteMainHorizontalNav" class="header_content">
                    
-						<!-- Logo -->
+						<%-- Logo --%>
 						<a id="fullsizerLogo" href="/">
 						<div id="wrapheader"></div></a>
 					
@@ -118,17 +111,15 @@
 						<portal:SiteMenu CssClass="MainMenu" id="SiteMenu1" runat="server" EnableTheming="false" UseTreeView="false" HideMenuOnSiteMap="false" Direction="Horizontal" TopLevelOnly="false" DynamicDisplayLevels="1"></portal:SiteMenu>	
 					</nav>
 					
-				
 					<input type="search" id="txtsearch" onkeypress="return search(event)" placeholder="Search">
-					
-
+				
 				  </div>
-				  <!-- END SITE Horizontal Nav -->
+				  <%-- END SITE Horizontal Nav --%>
 				  <div class="clear">
                   </div>
 			</div>
 		</div>
-				
+		<%-- End Header Container --%>
 				
 		</header>
 				
@@ -139,7 +130,7 @@
       {%>
             <div class="inner-container">
                 <%}%>
-				
+	
                 <asp:Panel ID="divLeft" runat="server" CssClass="leftside" Visible="True" SkinID="pnlPlain">
                    
 						<nav id="pageMenu">
@@ -159,28 +150,14 @@
                     <asp:ContentPlaceHolder ID="mainContent" runat="server" >
                     </asp:ContentPlaceHolder>
 					
-					
-					
-					
-					
-					
 					<div class="button_sliding_bg">Find out more</div>
 					
-						<!--
-				<div class="ContactUs_Button" id="contactUs_Button_Opener"><img alt="Find out more button" border="0" dialog="" id="contactPopupImg" src="https://sandbox.esdm.co.uk/Data/SiteImages/contact_us.png" title="Contact Us" />&nbsp;</div>  -->
+					
 
 <div id="dialog" title="Contact Us"></div>
 				
 				
-				
-				
-				
-				
-				
-				
-				
-				
-				
+
 					
                 </asp:Panel>
                 <asp:Panel ID="divRight" runat="server" Visible="True" CssClass="rightside" SkinID="pnlPlain">
@@ -295,7 +272,7 @@
 						</asp:LoginView>
 						<ul class="admin-links nav nav-pills nav-stacked">
 							<portal:UserProfileLink id="UserProfileLink" runat="server" CssClass="myprofilelink" RenderAsListItem="true" OverrideFormat="Profile" />
-		<!-- CUSTOM LINK FOR LOGGING QUOTE/ORDER -->
+		<%-- CUSTOM LINK FOR LOGGING QUOTE/ORDER --%>
      <asp:LoginView runat="server">  
       <RoleGroups>
        <asp:RoleGroup Roles="Admins,ESDM Staff Content Admin,ESDM Staff Read Only,ESDM Staff Site Administrators">
@@ -315,7 +292,6 @@
 							<portal:PageEditSettingsLink id="lnkPageSettings" runat="server" RenderAsListItem="true" />
 							<portal:LoginLink id="LoginLink" runat="server" CssClass=" " RenderAsListItem="true" OverrideText="Log In" />
 							<portal:LogoutLink id="LogoutLink" runat="server" CssClass="logoutlink" RenderAsListItem="true" />
-							<!-- <portal:RegisterLink id="RegisterLink" runat="server" CssClass=" " RenderAsListItem="true" /> -->
 							<portal:MobileSkinLink ID="mobileskin" runat="server" RenderAsListItem="true" OvverrideMobileText="Full Site" />
 						</ul>
 						<portal:AutoHidePanel ID="ah1" runat="server" CssClass="workflow">
@@ -324,9 +300,6 @@
 					</div>
 				</div>
 
-			
-				
-				
 			</div>
 			
 			
@@ -405,6 +378,11 @@
 			$(".button_sliding_bg").click(function () {
 				$("#dialog").dialog("open");
 			});
+			
+			if( $('div').hasClass('knowledgeBaseCentred') ) {
+				$('.center-leftmargin').css("width", "100%");
+			    $('.center-leftmargin').css("float", "none");
+			}
 
 		</script>
 		
