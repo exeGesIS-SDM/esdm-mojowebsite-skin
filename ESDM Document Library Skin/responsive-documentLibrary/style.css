@@ -328,7 +328,8 @@ body{line-height:1.3em;margin:0}
 }
 	 
 .header_container{box-shadow:0 0 3px rgba(0,0,0,0.20);margin:7px 0 4px;padding:13px 0 15px; background:#fff; }
-.header_content{width:1170px;margin:0 auto;position:relative; height:63px }
+/* replaced CF to allow full width .header_content{width:1170px;margin:0 auto;position:relative; height:63px } */
+.header_content{margin:0 auto;position:relative; height:63px }
 .headergraphic{height:106px;width:100%;background-repeat:no-repeat;background-image:url(images/esdm-banner.png);display:none}
 .wrapcenter{width:100%;min-height:400px;margin:0}
 #wrapfooter{clear:both;border-top:1px solid #c8c8c8;text-align:center;padding:10px}
@@ -670,6 +671,7 @@ div.findus-box h3,div.findus-box h4,div.findus-box h5,div.findus-box p{padding:0
 
 .modulecontent .bxslider .btn_black:hover{border:0;background:rgba(0,0,0,1)}
 .clear{clear:both;height:0}
+/* replaced CF to allow full width .services-container{padding:5px 0 50px;max-width:1170px;margin:0 auto} */
 .services-container{padding:5px 0 50px;max-width:1170px;margin:0 auto}
 .box_onethird{width:24%;margin:.5%;text-align:center;float:left}
 
@@ -678,8 +680,11 @@ img{max-width:100%}
 .box_onethird p{color:#575757;font-family:'open_sansregular',arial;font-size:14px;line-height:30px;margin:0}
 
 
-.inner-container{max-width:1170px;margin:0 auto;padding:100px 0 0; word-wrap: break-word;}
-.inner-container-no-padding{max-width:1170px;margin:0 auto;padding:0px 0 0}
+/* replace CF to allow full width .inner-container{max-width:1170px;margin:0 auto;padding:100px 0 0; word-wrap: break-word;} 
+.inner-container-no-padding{max-width:1170px;margin:0 auto;padding:0px 0 0} */
+.inner-container{margin:0 auto;padding:100px 0 0; word-wrap: break-word;} 
+.inner-container-no-padding{margin:0 auto;padding:0px 0 0}
+
 .box_half{width:48%;float:left}
 .text-right{text-align:right}
 .clr_seperator{
