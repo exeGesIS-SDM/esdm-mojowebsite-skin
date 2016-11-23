@@ -18,11 +18,11 @@
 	position: relative;
 	margin: 0 auto 35px;
 	padding: 0;
-	*zoom: 1;
+  /*	*zoom: 1;*/
 }
 
 .bx-wrapper img {
-	max-width: 100%;
+	width: 100%;
 	display: block;
 	position:relative;
 }
@@ -78,8 +78,8 @@
 .bx-wrapper .bx-pager .bx-pager-item,
 .bx-wrapper .bx-controls-auto .bx-controls-auto-item {
 	display: inline-block;
-	*zoom: 1;
-	*display: inline;
+	/**zoom: 1;
+	*display: inline;*/
 }
 
 .bx-wrapper .bx-pager.bx-default-pager a {
@@ -195,7 +195,7 @@
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	background: #666\9;
+	/*background: #666\9;*/
 	background: rgba(80, 80, 80, 0.75);
 	width: 100%;
 }
