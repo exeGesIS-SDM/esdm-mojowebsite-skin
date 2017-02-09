@@ -43,6 +43,7 @@
 	
 	<%-- BODY --%>
 	<body class="page-body" runat="server">
+		<portal:AddThisWidget ID="adthis" runat="server" />
 		<portal:AnalyticsAsyncTopScript id="analyticsTop" runat="server" />
 		<portal:LayoutDisplaySettings id="LayoutDisplaySettings1" runat="server" />
 		<form class="form" id="frmMain" runat="server">	
