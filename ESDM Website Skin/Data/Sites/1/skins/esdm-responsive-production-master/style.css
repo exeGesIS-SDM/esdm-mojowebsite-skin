@@ -1589,5 +1589,27 @@ div.adminmenu ul.simplelist li a {
     text-align: center;
 }
 
+/* Call To Action - Contact Side Form */
 
+.callToActionContactForm {
+	width:250px;
+}
 
+.callToActionContactForm fieldset {
+     border: 0px solid #eee; 
+     margin: 0;
+     padding: 0em; 
+}
+
+.callToActionContactForm input, .callToActionContactForm textarea {
+     width: 230px;
+}
+
+.callToActionContactForm .modulecontent {
+	font-size: 14px;
+}
+
+.callToActionContactForm  .settinglabel, .settinglabelFixedHeight {
+    font-weight: 700;
+    font-size: medium; 
+}
