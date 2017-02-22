@@ -258,7 +258,7 @@ div.AspNet-Menu-Vertical li.AspNet-Menu-SelectedLeaf a.AspNet-Menu-SelectedLeaf,
 }
 div.AspNet-Menu-Vertical li.has-popup a
 {
-	background-image:url('arrowRight.gif');
+	background-image:url('images/arrowRight.gif');
 	background-repeat:no-repeat;
     background-position:right center;	
 	padding-right:20px;
