@@ -3,7 +3,7 @@
 .blognavright {float: right; width: 155px;  padding: 5px 5px 30px 5px; margin: 0px 0px 0px 0px;  }
 .blogcenter-nonav {margin: 0px 0px 0px 0px; padding: 5px 0px 0px 5px;    }
 .blogcenter-leftnav {margin: 0px 0px 0px 165px; padding: 5px 0px 0px 5px;  }
-.blogcenter-rightnav {margin:0px 165px 0px 0px; padding: 5px 0px 0px 5px;   }
+.blogcenter-rightnav {margin:0px 165px 0px 0px; padding: 5px 0px 0px 0px;   }
 .bloginfo {   }
 .bloginfotitle {  font-size: 110%; font-weight: bold; }
 .blogtitle { margin: 5px 0px 0px 0px;   font-weight: bold;  }
