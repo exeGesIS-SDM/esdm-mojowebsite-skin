@@ -1615,4 +1615,19 @@ div.adminmenu ul.simplelist li a {
     font-size: medium; 
 }
 
-.nowrap { white-space: nowrap; }
+.nowrap { 
+	white-space: nowrap; 
+}
+
+.ajax__calendar {
+	line-height: normal !important;
+}
+
+.ajax__calendar_dayname  {
+	white-space: nowrap;
+}
+
+input[type=checkbox], input[type=radio] {
+    margin-right: 10px;
+}
+
