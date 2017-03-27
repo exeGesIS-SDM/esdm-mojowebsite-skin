@@ -220,6 +220,19 @@
 .ui-button:active {
 	text-decoration: none;
 }
+
+.esdmForm .ui-button {
+	background: #5AB05A ! important;
+    color: #fff !important;
+    border-radius: 4px !important;  
+	transition: all 0.3s ease 0s;
+	border: 0 !important;
+}
+
+.esdmForm .ui-button:hover {
+	background: #008D38 !important;  
+}
+
 /* to make room for the icon, a width needs to be set here */
 .ui-button-icon-only {
 	width: 2.2em;
