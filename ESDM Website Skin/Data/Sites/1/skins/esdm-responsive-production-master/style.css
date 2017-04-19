@@ -285,7 +285,7 @@ div.sitemap ul,div.sitemap ul li{font-size:100%;list-style:none}
     /*display: block;*/
 	display: none;
     bottom: 0;
-	right: 999em;
+	/* right: 999em; */
     z-index: 100;
 }
 
@@ -315,14 +315,14 @@ body{line-height:1.3em;margin:0}
 
 
 #wrapheader{ 
-     z-index: 9; 
+     z-index: 99999 !import; 
 	 display:block;
 	 height:63px;
 	 vertical-align:bottom;
 	 background-color:#fff;
 	 margin:0;
 	 background-repeat:no-repeat;
-	 background-image:url(images/esdm-banner.png);
+	 background-image:url(img/esdm-banner.png);
 	 width:258px;
 	 float:left;
 	 position:relative;

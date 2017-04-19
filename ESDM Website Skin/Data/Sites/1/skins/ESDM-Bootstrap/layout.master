@@ -1,0 +1,336 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="~/App_MasterPages/layout.Master.cs" Inherits="mojoPortal.Web.layout" %>
+<!DOCTYPE html>
+<html class="htmlclass">
+	<head id="Head1" runat="server">
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title></title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+	    <meta name="HandheldFriendly" content="True">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		
+		<%-- Android Specific Icons --%>
+		<link rel="icon" href="img/ESDM_logo_128x128.png" />
+		<link rel="icon" href="img/ESDM_logo_192x192.png" />
+		<%-- iOS Touch Icons --%>
+		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="img/ESDM_logo_152x152.png">
+		<link rel="apple-touch-icon-precomposed" sizes="180x180" href="img/ESDM_logo_180x180.png">
+		<link rel="apple-touch-icon-precomposed" href="img/ESDM_logo_128x128.png">
+		<%-- Windows 8 and above Tile icons --%>
+		<meta name="msapplication-config" content="browserconfig.xml" />
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="images/ESDM_logo_270x270.png">
+		
+		<!--#include file="includes/favicons.html"-->
+		<portal:MetaContent id="MetaContent" runat="server" DisableContentType="true" PreZoomForIPhone="false" />
+
+		<!-- Font -->
+		<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+		
+		<!-- Style -->
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<portal:SkinFolderCssFile runat="server" CssFileName="js/smartmenus/jquery.smartmenus.bootstrap.css" />
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+		<portal:StyleSheetCombiner id="StyleSheetCombiner" runat="server" IncludeJQueryUI="false" UseIconsForAdminLinks="false" EnableNonClickablePageLinks="true" QtFileCssIsInMainCss="false" IncludeColorBox="true" />
+
+		<!-- Scripts -->
+		<portal:ScriptLoader id="ScriptLoader1" runat="server" AssumejQueryIsLoaded="true" AssumejQueryUiIsLoaded="true" IncludeColorBox="false" IncludeSimpleFaq="true" IncludejQueryAccordion="true" />
+		<script src="//code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+		<script src="//code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+		<!-- Change JQueryUI plugin names to fix name collision with Bootstrap. -->
+		<script>$.widget.bridge('uiTooltip', $.ui.tooltip);$.widget.bridge('uiButton', $.ui.button);</script>
+	</head>
+	
+	<body class="pagebody" id="Body" runat="server">
+		<portal:FacebookSdk id="fbsdk" runat="server" />
+	    <portal:AddThisWidget ID="adthis" runat="server" />
+		<portal:AnalyticsAsyncTopScript id="analyticsTop" runat="server" />
+		<portal:LayoutDisplaySettings id="LayoutDisplaySettings1" runat="server" />
+		<form id="frmMain" runat="server" class="main-form">
+			<asp:SiteMapDataSource id="SiteMapData" runat="server" ShowStartingNode="false" />
+			<asp:SiteMapDataSource id="PageMapDataSource" runat="server" ShowStartingNode="false" />
+			<asp:SiteMapDataSource id="ChildPageSiteMapData" runat="server" ShowStartingNode="false" />
+			<asp:ScriptManager id="ScriptManager1" EnablePageMethods="true" runat="server" EnableScriptGlobalization="true" EnableScriptLocalization="true" />
+
+			<!--#include file="includes/browsehappy.html"-->
+			<!--#include file="includes/administration-drawer.html"-->
+
+			<div class="sitewrap">
+			
+			
+				<header class="head" role="banner">
+				
+				<div class="header_container">
+				
+				
+				<%-- Logo --%>
+						<!-- <a id="fullsizerLogo" href="/"> -->
+						<!-- <div id="wrapheader"></div></a> -->
+				
+					<nav class="navbar navbar-default navbar-static-top navbar-site">
+						
+						
+						
+						<div class="container">
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#site-menu" aria-expanded="false">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+
+								<asp:HyperLink runat="server" NavigateUrl="~/" CssClass="navbar-brand">
+									<portal:SiteTitle runat="server" SkinId="navbar-brand" />
+									<!-- Logo -->
+									<div id="wrapheader"></div>
+									
+								</asp:HyperLink>
+							</div>
+
+							<div class="collapse navbar-collapse" id="site-menu">
+								<portal:SiteMenu id="SiteMenu1" runat="server" MenuSkinId="MainMenu" UseFlexMenu="true" />
+							</div>
+							
+								<input type="search" id="txtsearch" onkeypress="return search(event)" placeholder="">
+						
+						
+						</div>
+						
+						
+		</nav>
+					</div>
+					
+					
+					
+				</header>
+
+
+				<main class="main-content">
+					<portal:LayoutPanel id="divAlt1" runat="server" SkinID="TopPane">
+						<asp:ContentPlaceHolder id="altContent1" runat="server"></asp:ContentPlaceHolder>
+					</portal:LayoutPanel>
+
+					<div class="container">
+						<portal:Breadcrumbs id="Breadcrumbs" runat="server" Separator="" ItemWrapperTop="<li>" ItemWrapperBottom="</li>" CssClass="" CurrentPageCssClass="active" />
+
+						<div class="row" id="start-content">
+							<portal:LayoutPanel id="divLeft" runat="server" SkinID="LeftPane">
+							
+									<nav id="pageMenu">
+									   <portal:pagemenu id="PageMenu1" 
+										runat="server" 
+										usetreeview="false" />
+									</nav>
+							
+								<asp:contentplaceholder id="leftContent" runat="server"></asp:contentplaceholder>
+							</portal:LayoutPanel>
+
+							<portal:LayoutPanel id="divCenter" runat="server" SkinID="CenterPane">
+								<asp:ContentPlaceHolder id="mainContent" runat="server"></asp:ContentPlaceHolder>
+								<%-- Both `button_sliding_bg` and `dialog` are required for the `Find out more` button to appear --%>
+								<div class="button_sliding_bg">Find out more</div>
+								<div id="dialog" title="Contact Us"></div>
+							</portal:LayoutPanel>
+
+							<portal:LayoutPanel id="divRight" runat="server" SkinID="RightPane">
+								<asp:contentplaceholder id="rightContent" runat="server"></asp:contentplaceholder>
+							</portal:LayoutPanel>
+						</div>
+					</div>
+
+					<portal:LayoutPanel id="divAltContent2" runat="server" SkinID="BottomPane">
+						<asp:ContentPlaceHolder id="altContent2" runat="server"></asp:ContentPlaceHolder>
+					</portal:LayoutPanel>
+				</main>
+			</div>
+
+
+			<footer class="foot">
+				<div class="container">
+				
+				
+<div class="inner-container">
+
+
+
+
+
+
+
+
+<div class="row text-center">
+
+
+			<div class="footer-col  col-xs-12 col-sm-offset-2 col-sm-9 col-md-offset-0 col-md-3" >
+
+					<portal:SkinFolderImage ID="exeGesISFooterLogo" runat="server" ImageFileName="img/logo_exegesis.png" AlternateText=" " />
+			</div>
+		    <div class="footer-col  col-xs-12 col-sm-offset-2 col-sm-9 col-md-offset-0 col-md-3" >
+				<h4>Our Services</h4>
+
+				<ul>
+					<li><asp:HyperLink ID="lnkSoftware" runat="server" NavigateUrl="~/software" Text="Software" /></li>
+					<li><asp:HyperLink ID="lnkService" runat="server" NavigateUrl="~/services" Text="Services" /></li>
+					<li><asp:HyperLink ID="lnkGISConsultancy" runat="server" NavigateUrl="~/gis-consultancy" Text="GIS Consultancy" /></li>
+					<li><asp:HyperLink ID="lnkApplicationDevelopment" runat="server" NavigateUrl="~/application-development" Text="Application Development" /></li>
+					<li><asp:HyperLink ID="lnkMojoportalCMS" runat="server" NavigateUrl="~/mojoportal-cms-web-sites" Text="CMS Web Sites" /></li>
+					<li><asp:HyperLink ID="lnkWebMapping" runat="server" NavigateUrl="~/web-mapping" Text="Web Mapping" /></li>
+				</ul>
+			</div>
+			<div class="footer-col  col-xs-12 col-sm-offset-2 col-sm-9 col-md-offset-0 col-md-3" >
+				<h4>Site Features</h4>
+
+				<ul>
+					<portal:SiteMapLink id="SiteMapLink1" runat="server" CssClass="sitemaplink" RenderAsListItem="true" /> 
+					<li><portal:SkinPreview id="SkinPreview1" runat="server" RenderAsListItem="true"></portal:SkinPreview></li>
+					<li><asp:HyperLink ID="lnkContact" runat="server" NavigateUrl="~/Contact" Text="Contact" /></li>
+
+				</ul>
+			</div>
+			<div class="footer-col  col-xs-12 col-sm-offset-2 col-sm-9 col-md-offset-0 col-md-3">
+				<h4>User Functions</h4>
+
+				<ul>
+					<portal:loginlink id="LoginLink_Footer" runat="server" RenderAsListItem="true" />
+					<portal:homelink id="HomeLink_Footer" runat="server" RenderAsListItem="true" />
+					<portal:userprofilelink id="UserProfileLink_Footer" runat="server" RenderAsListItem="true" />
+					<portal:mailboxlink id="MailboxLink_Footer" runat="server" RenderAsListItem="true" linkonly="false"  />
+					<portal:memberlistlink id="MemberListLink_Footer" runat="server" RenderAsListItem="true" />
+					<portal:registerlink id="RegisterLink_Footer" runat="server" RenderAsListItem="true" />
+					<portal:logoutlink id="LogoutLink_Footer" runat="server" RenderAsListItem="true"  />
+				</ul>
+			</div>
+			
+</div>		
+
+<div class="clear">&nbsp;</div>
+</div>
+
+
+	</div>
+
+<div class="copyright container-fluid">
+<div class="" style="margin:auto; width:75%; text-align:center; padding: 22px 0px"><span>&copy; exeGesIS Spatial Data Management Ltd. Company No: 3743089. Registered in England and Wales.</span>
+
+
+</div>
+</div>
+
+				
+				
+				
+				
+				
+					<!-- <hr> -->
+					<!-- <div class="row"> -->
+						<!-- <div class="col-sm-6 text-xs-center text-sm-left"> -->
+							<!-- <small>&copy; <%= DateTime.Now.Year.ToString() %> <portal:CompanyNameLiteral id="CompanyName1" runat="server" /></small> -->
+						<!-- </div> -->
+						<!-- <div class="col-sm-6 text-xs-center text-sm-right"> -->
+							<!-- <portal:LoginLink id="LoginLink" runat="server" RenderAsListItem="false" /> -->
+						<!-- </div> -->
+					<!-- </div> -->
+					<!-- <br> -->
+					
+					
+					
+					
+			
+				
+				
+				
+			</footer>
+		</form>
+
+		<!-- Main Script -->
+		<portal:SkinFolderScript runat="server" ScriptFileName="js/bootstrap.min.js" RenderInPlace="true" />
+		<!-- Change Bootstrap plugin names to fix name collision with jQueryUI -->
+		<script type="text/javascript">
+		
+			var bstt = $.fn.tooltip.noConflict(); $.fn.bsTooltip = bstt;
+		
+			function search(e) {
+				if (e.keyCode == 13) {
+					var tb = document.getElementById("txtsearch");
+					if (tb.value != '') {
+						window.location.href = "/SearchResults.aspx?q=" + tb.value;
+					}
+					return false;
+				}
+			}
+			
+
+			
+		  <%-- Dialog initialisation for find out more --%>
+		   // Initialize dialog
+			$("#dialog").dialog({
+				modal: true,
+				autoOpen: false,
+				dialogClass: 'success-dialog',
+				open: function() {
+					$('.ui-widget-overlay').addClass('custom-overlay');
+				},
+				close: function() {
+					$('.ui-widget-overlay').removeClass('custom-overlay');
+				},            
+				show: {
+					 },
+				hide: {
+				   }
+			});
+			
+		
+
+			// Get the Sidebar contact info
+			var dialogContent = $(".contactPopup").html();
+
+			 if (typeof dialogContent == 'undefined') { 
+				  $('.button_sliding_bg').css('display','none');
+				  $('.button_sliding_bg').css('position',''); 
+			 }
+			 else {
+				$('.button_sliding_bg').css('display','block');
+			    $('.button_sliding_bg').css('position','fixed');
+			 }
+
+			// Add the sidebar contact info to the sidebar
+			$("#dialog").html(dialogContent);
+
+			// Open it when #opener is clicked
+			$(".button_sliding_bg").click(function () {
+				$("#dialog").dialog("open");
+			});
+			
+		</script>
+		<portal:SkinFolderScript runat="server" ScriptFileName="js/smartmenus/jquery.smartmenus.min.js" RenderInPlace="true" />
+		<portal:SkinFolderScript runat="server" ScriptFileName="js/smartmenus/jquery.smartmenus.bootstrap.min.js" RenderInPlace="true" />
+		<portal:SkinFolderScript runat="server" ScriptFileName="js/main.min.js" RenderInPlace="true" />
+		<portal:SkinFolderScript runat="server" ScriptFileName="js/administration.min.js" RenderInPlace="true" VisibleRoles="Authenticated Users" />
+		
+	<!-- Google Code for Remarketing Tag -->
+		<script type="text/javascript">
+		/* <![CDATA[ */
+		var google_conversion_id = 1049584262;
+		var google_custom_params = window.google_tag_params;
+		var google_remarketing_only = true;
+		/* ]]> */
+		</script>
+		<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+		</script>
+		<noscript>
+		<div style="display:inline;">
+		<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1049584262/?guid=ON&amp;script=0"/>
+		</div>
+		</noscript>
+		<portal:Woopra ID="woopra11" runat="server" />
+		<portal:AnalyticsAsyncBottomScript ID="analyticsBottom" runat="server" />
+		
+		
+		
+		
+	</body>
+</html>
