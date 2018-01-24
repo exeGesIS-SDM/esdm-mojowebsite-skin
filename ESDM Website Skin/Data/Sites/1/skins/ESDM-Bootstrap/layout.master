@@ -84,7 +84,6 @@
 								</button>
 
 								<asp:HyperLink runat="server" NavigateUrl="~/" CssClass="navbar-brand">
-									<portal:SiteTitle runat="server" SkinId="navbar-brand" />
 									<!-- Logo -->
 									<div id="wrapheader"></div>
 									
