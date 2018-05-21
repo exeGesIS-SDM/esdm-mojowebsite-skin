@@ -4,6 +4,7 @@
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load
         litMessage.Text = "Oops, something went wrong."
         Dim EmailAddress As String = HttpContext.Current.Request.QueryString("email")
+
         If ValidateEmailAddress(EmailAddress) Then
             If WriteToGdprTable(EmailAddress) Then
                 litMessage.Text = "Thanks for opting in!"
@@ -31,9 +32,10 @@
             Using connection As New System.Data.SqlClient.SqlConnection(ConfigurationManager.AppSettings("MSSQLConnectionString"))
 
                 Dim myCommand As System.Data.SqlClient.SqlCommand = connection.CreateCommand()
-                myCommand.CommandText = "INSERT INTO [dbo].[esdm_OptIn] ([email],[optindatetime]) VALUES (@p1,@p2)"
+                myCommand.CommandText = "INSERT INTO [dbo].[esdm_OptIn] ([email],[optindatetime],[ipaddress]) VALUES (@p1,@p2,@p3)"
                 myCommand.Parameters.AddWithValue("@p1", emailAddress)
                 myCommand.Parameters.AddWithValue("@p2", DateTime.Now())
+                myCommand.Parameters.AddWithValue("@p3", HttpContext.Current.Request.UserHostAddress)
                 myCommand.CommandTimeout = 30
                 myCommand.CommandType = System.Data.CommandType.Text
 
