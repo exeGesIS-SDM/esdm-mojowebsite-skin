@@ -1,5 +1,6 @@
 ﻿<%@ Page Language="vb" AutoEventWireup="false" MasterPageFile="~/App_MasterPages/layout.Master" Inherits="mojoPortal.Web.NonCmsBasePage" %>
 
+
 <script runat="server">
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load
         litMessage.Text = "Oops, something went wrong."
@@ -8,6 +9,7 @@
         If ValidateEmailAddress(EmailAddress) Then
             If WriteToGdprTable(EmailAddress) Then
                 litMessage.Text = "Thanks for opting in!"
+                pnlFeedback.CssClass = "success"
             End If
         Else
             litMessage.Text = "Oops, something went wrong - please enter your email here and click ""Opt In"""
@@ -53,6 +55,7 @@
         If ValidateEmailAddress(txtEmailAddress.Text) Then
             If WriteToGdprTable(txtEmailAddress.Text) Then
                 litMessage.Text = "Thanks for opting in!"
+                pnlFeedback.CssClass = "success"
                 pnlUserEntry.Visible = False
             End If
         Else
@@ -62,10 +65,19 @@
 </script>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="mainContent" runat="server">
+    <style>
+        .success {
+            width:100%;
+            font-size:xx-large;
+            text-align:center;
+            color:white;
+            background-color:#00b050;
+        }
+</style>
     <div>
-        <p>
+        <asp:Panel ID="pnlFeedback" runat="server">
             <asp:Literal ID="litMessage" runat="server" Text="" />
-        </p>
+        </asp:Panel>
 
         <asp:Panel ID="pnlUserEntry" runat="server" Visible="false">
             <asp:TextBox ID="txtEmailAddress" runat="server" AutoCompleteType="Email" TextMode="SingleLine" Text="" />
