@@ -27,3 +27,6 @@ h5{
 	font-size: 1.6rem;
 }
 
+.AspNet-Menu.static {
+	z-index: 30;
+}
