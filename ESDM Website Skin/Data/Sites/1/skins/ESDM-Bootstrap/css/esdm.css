@@ -30,3 +30,15 @@ h5{
 .AspNet-Menu.static {
 	z-index: 30;
 }
+
+.htmlmodule  .modulecontent ul {
+	 list-style: none;  
+}
+
+.htmlmodule .modulecontent li:before {
+    font-family: 'fontawesome';
+	font-size: 18px;
+    content: '\f05d';
+    margin: 0 10px 0 -18px;
+    color: #888888;
+}
