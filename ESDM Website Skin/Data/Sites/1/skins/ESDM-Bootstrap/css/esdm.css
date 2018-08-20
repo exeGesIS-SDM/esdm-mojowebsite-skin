@@ -44,6 +44,11 @@ h5{
     color: #888888;
 }
 
+/* Exclude HomePage containers from listitem bullet styles */
+.logos-container  li:before, .bxslider li:before {
+    content: '' !important;
+}
+
 /* Override the radio button style  */
 input[type='radio'] + label:before, input[type='radio'] + label:after,
 	input[type='checkbox'] + label:before,
