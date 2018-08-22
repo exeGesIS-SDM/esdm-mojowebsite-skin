@@ -1,47 +1,29 @@
-li.AspNet-Menu-Leaf.static  a{
-	white-space:normal;
-}
+/* .header_container { */
+  /* box-shadow: 0 0 3px rgba(0, 0, 0, 0.2); */
+  /* margin: 0px; */
+  /* padding: 0px; */
+  /* background: #fff; */
+/* } */
 
-.modulecontent {
-	font-size:1.4rem;
-}
 
-h4, h5, h6, h4, h5, h6 {
-    margin-top: 12px;
-    margin-bottom: 6px;
-}
 
-.modulecontent ul {
-    list-style-image: none;
-}
-
-h3{
-	font-weight:600;
-	font-size: 2.0rem;
-}
-h4{	
-	font-size: 1.8rem;
-}
-h5{
-	font-weight:600;
-	font-size: 1.6rem;
-}
 
 .AspNet-Menu.static {
 	z-index: 30;
 }
 
+/* .htmlmodule .modulecontent ul{list-style-image:url('img/tick24light.jpg')} */
+
 .htmlmodule  .modulecontent ul {
 	 list-style: none;  
 }
 
-/* List item style fontawesome bullets  */
 .htmlmodule .modulecontent li:before {
     font-family: 'fontawesome';
 	font-size: 18px;
     content: '\f05d';
-    margin: 0 10px 0 -18px;
-    color: #888888;
+    margin: 0 0.8em 0 -1.7em;
+     color: #888888;
 }
 
 /* Exclude HomePage containers from listitem bullet styles */
@@ -49,7 +31,7 @@ h5{
     content: '' !important;
 }
 
-/* Override the radio button style  */
+
 input[type='radio'] + label:before, input[type='radio'] + label:after,
 	input[type='checkbox'] + label:before,
 	input[type='checkbox'] + label:after {
@@ -62,6 +44,125 @@ input[type='radio'] + label:before, input[type='radio'] + label:after,
 	  top: 2px;
 	  text-align: center;
 	  position: absolute;
-	  border: 1px solid #ccc;
-      border-radius: 3px;
+	   border: 1px solid #ccc;
+    border-radius: 3px;
+	}
+
+
+
+
+
+
+
+
+
+
+/*.btn-shadow(@color) {
+  #gradient > .vertical-three-colors(lighten(@color, 8%), @color, 60%, darken(@color, 4%));
+  filter: none;
+  border-bottom: 1px solid darken(@color, 10%);
+}*/
+/*.navbar {
+  &-default {
+    .btn-shadow(@navbar-default-bg);
+    filter: none;
+    .box-shadow(0 1px 10px rgba(0, 0, 0, 0.1));
+
+    .badge {
+      background-color: #fff;
+      color: @navbar-default-bg;
+    }
+  }
+
+  &-inverse {
+    #gradient > .vertical-three-colors(lighten(@navbar-inverse-bg, 8%), lighten(@navbar-inverse-bg, 4%), 60%, darken(@navbar-inverse-bg, 2%));
+    filter: none;
+    border-bottom: 1px solid darken(@navbar-inverse-bg, 10%);
+
+    .badge {
+      background-color: #fff;
+      color: @navbar-inverse-bg;
+    }
+  }
+
+  .navbar-nav > li > a,
+  &-brand {
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  }
 }
+
+@media (max-width: @grid-float-breakpoint-max) {
+
+  .navbar {
+
+    .dropdown-header {
+      color: #fff;
+    }
+
+    .dropdown-menu {
+      a {
+        color: #fff;
+      }
+    }
+  }
+}*/
+/*.btn {
+
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+
+  .caret {
+    border-top-color: #fff;
+  }
+}
+
+.btn-default {
+  
+  .btn-shadow(@btn-default-bg);
+
+  &:hover {
+    color: @btn-default-color;
+  }
+
+  .caret {
+    border-top-color: @text-color;
+  }
+}
+
+.btn-default {
+  .btn-shadow(@btn-default-bg);
+}
+
+.btn-primary {
+  .btn-shadow(@btn-primary-bg);
+}
+
+.btn-success {
+  .btn-shadow(@btn-success-bg);
+}
+
+.btn-info {
+  .btn-shadow(@btn-info-bg);
+}
+
+.btn-warning {
+  .btn-shadow(@btn-warning-bg);
+}
+
+.btn-danger {
+  .btn-shadow(@btn-danger-bg);
+}*/
+/*.panel-primary,
+.panel-success,
+.panel-warning,
+.panel-danger,
+.panel-info {
+
+  .panel-heading,
+  .panel-title {
+    color: #fff;
+  }
+
+  > .panel-heading .badge {
+    background-color: #fff;
+  }
+}*/

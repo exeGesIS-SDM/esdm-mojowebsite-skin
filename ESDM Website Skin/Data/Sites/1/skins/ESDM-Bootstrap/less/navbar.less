@@ -28,13 +28,13 @@
 // Groups `.navbar-brand` and `.navbar-toggle` into a single component for easy
 // styling of responsive aspects.
 
-.navbar-header {
-  &:extend(.clearfix all);
+//.navbar-header {
+ // &:extend(.clearfix all);
 
-  @media (min-width: @grid-float-breakpoint) {
-    float: left;
-  }
-}
+//  @media (min-width: @grid-float-breakpoint) {
+//    float: none;
+//  }
+//}
 
 
 // Navbar collapse (body)
@@ -161,8 +161,8 @@
 // Brand/project name
 
 .navbar-brand {
-  float: left;
-  padding: @navbar-padding-vertical @navbar-padding-horizontal;
+ // float: left;
+ // padding: @navbar-padding-vertical @navbar-padding-horizontal;
   font-size: @font-size-large;
   line-height: @line-height-computed;
   height: @navbar-height;
@@ -179,7 +179,7 @@
   @media (min-width: @grid-float-breakpoint) {
     .navbar > .container &,
     .navbar > .container-fluid & {
-      margin-left: -@navbar-padding-horizontal;
+     // margin-left: -@navbar-padding-horizontal;
     }
   }
 }

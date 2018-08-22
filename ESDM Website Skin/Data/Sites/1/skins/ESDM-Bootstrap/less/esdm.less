@@ -28,6 +28,7 @@ h4 {
     margin:6px 0 8px 0;
     padding: 12px 0 0px 0; 
     background:#fff;  
+    height: 88px; 
 }
 
 #wrapheader{ 
@@ -42,7 +43,6 @@ h4 {
 	 width:258px;
 	 float:left;
 	 position:relative;
-	 margin-left: 9px;
 	
 }
  
@@ -60,20 +60,21 @@ h4 {
 	/* text-transform:uppercase;   */
 	color: #3F3F3F;
 	font-size: 1.1em;
+	height: 75px;
 }
 
 #site-menu {
 	margin-right: 47px;
-	margin-top:3px;
+	margin-top:4px;
 }
   
   
  .navbar-brand {
-    float: left;
-    padding: 0px 0px;
-    font-size: 18px;
-    line-height: 20px;
-    height: 50px;
+  //  float: none;
+  //  padding: 0px 0px;
+   // font-size: 18px;
+   // line-height: 20px;
+   // height: 50px;
 }
 
 
@@ -200,10 +201,8 @@ footer a {}
 	display:inline;
 	float: right;
 	position: relative;
-	bottom: 33px;
+	bottom: 46px;
 }
-
-
 
 #txtsearch:focus
 {
@@ -214,12 +213,10 @@ footer a {}
 	-webkit-box-shadow:0 0 5px rgba(90,176,90,.5);
 	-moz-box-shadow:0 0 5px rgba(90,176,90,.5);
 	box-shadow:0 0 5px rgba(90,176,90,.5);
-	padding:5px;
+	/*padding:5px;*/
 	color:#252525;
 	/*top:17px;*/
 }
-
-
 
 .copyright {
     background: #1a1a1d;
@@ -470,7 +467,11 @@ h3{
 	 width:100% !important; 
      padding-left: 0px; 
      padding-right: 0px; 
-	
+}
+
+
+.main-content {
+	margin-top: 18px;
 }
 
 .pull_left{float:left}
@@ -801,7 +802,22 @@ li.linkitem a,li.linkaltitem a{color:#A58970;text-decoration:none}
 	.left-pane.col-md-3 {
 		width: 25% !important;
 	}
+	
+	.navbar-header { 
+		float: left; 
+	}
+	
+	
 }
+
+
+@media screen and (max-width: 9200px)
+{
+	.navbar-header {
+		float: left;
+	}
+}
+
 
 /*------------------------------------------
  *   	Screen - Medium (>=992px)
@@ -809,6 +825,18 @@ li.linkitem a,li.linkaltitem a{color:#A58970;text-decoration:none}
 
 @media screen and (max-width: @screen-md) 
 { 
+
+	.header_container {
+	   
+		height: 142px;
+	}
+	
+	#txtsearch {
+		
+		bottom: 34px;
+	}
+
+
 	#contactUs_Button_Opener{display: inline;}
 	#navbar-menu-button { display: inline; } 
 	#navbar-menu-admin-button { display: inline; }
@@ -821,6 +849,15 @@ li.linkitem a,li.linkaltitem a{color:#A58970;text-decoration:none}
 	.header_content{ 
 		width:100%!important;
 		height: 48px;
+	}
+	
+	
+	.header_container {
+		/* height: 172px; */
+	}
+	
+	.navbar-header {
+		float: none;
 	}
 	
 	.center-leftmargin { margin-left:auto; margin-right:auto; width: 90%; float:none;}
@@ -841,7 +878,7 @@ li.linkitem a,li.linkaltitem a{color:#A58970;text-decoration:none}
 	.navbar-right {
 	
 		/* margin-right: 33px; */
-		 margin-top: 30px; 
+		 margin-top: 5px; 
 	}
 	
 	#wrapheader {
@@ -857,7 +894,7 @@ li.linkitem a,li.linkaltitem a{color:#A58970;text-decoration:none}
 		float: none; 
 		 /* position: static;  */
 		margin: 0 auto;
-		margin-left: 244px;
+		top: 0px;
 	}
 	
 	/* .bxslider-content{top:10%} */
@@ -876,7 +913,7 @@ li.linkitem a,li.linkaltitem a{color:#A58970;text-decoration:none}
 	
 	#site-menu {
 		margin-right: 94px;
-		margin-top: 42px;
+		margin-top: 4px;
 	}
 	
 }
@@ -889,12 +926,19 @@ li.linkitem a,li.linkaltitem a{color:#A58970;text-decoration:none}
 
 @media screen and (max-width: @screen-sm) 
 {
-    .button_sliding_bg { right: 0em !important; }
-	
-	#wrapheader {
-		margin-left: 95px;
+	.navbar {
+		height:auto !important;
 		
 	}
+	
+	
+
+.header_container {
+			height:auto !important;
+	}
+
+
+    .button_sliding_bg { right: 0em !important; }
 	
 	
 	/* #site-menu { */
@@ -904,6 +948,12 @@ li.linkitem a,li.linkaltitem a{color:#A58970;text-decoration:none}
 	
 	#txtsearch { 
 		display: none; 
+	}
+	
+	.navbar-header {
+	
+		float: none;
+	  
 	}
 	
 	
@@ -921,7 +971,7 @@ li.linkitem a,li.linkaltitem a{color:#A58970;text-decoration:none}
 	.enquire-container h2{ float:none; font-size:27px; margin:0;}
 	a.btn_outlined{ float:none; margin:10px auto 0 auto;  }
 	
-	    background: transparent;
+	background: transparent;
     box-shadow: none;
     border: 1px solid #fff;
     color: #fff;
@@ -933,11 +983,18 @@ li.linkitem a,li.linkaltitem a{color:#A58970;text-decoration:none}
 		display: inline-block;
 	}
 	
-	
 	#site-menu {
 		margin-right: 0px; 
 		margin-top: 0px; 
 	}
+	
+	#wrapheader {
+		height: 57px;
+		width: 218px;
+		background-size: 218px 57px;
+	    left: -21px;
+	}
+	
 }
 
 .clientbox{width:130px;height:180px;padding:0;border:0;margin:6px;float:left}
