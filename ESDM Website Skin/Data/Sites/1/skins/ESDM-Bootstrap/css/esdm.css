@@ -18,7 +18,7 @@
 	 list-style: none;  
 }
 
-.htmlmodule .modulecontent li:before {
+.htmlmodule .modulecontent ul li:before {
     font-family: 'fontawesome';
 	font-size: 18px;
     content: '\f05d';
