@@ -14,11 +14,11 @@
 
 /* .htmlmodule .modulecontent ul{list-style-image:url('img/tick24light.jpg')} */
 
-.htmlmodule  .modulecontent ul {
+.modulecontent ul {
 	 list-style: none;  
 }
 
-.htmlmodule .modulecontent ul li:before {
+.modulecontent ul li:before {
     font-family: 'fontawesome';
 	font-size: 18px;
     content: '\f05d';
@@ -26,15 +26,17 @@
      color: #888888;
 }
 
-/* Exclude HomePage containers from listitem bullet styles */
-.logos-container  li:before, .bxslider li:before {
+/* Exclude containers from listitem bullet styles */
+.logos-container  li:before, .bxslider li:before, .mojo-tabs  li:before, 
+.bcatlist  li:before, .barchivelist  li:before, .simplelist li:before , .settingrow li:before  {
     content: '' !important;
+	  margin: auto !important;
 }
 
 
-input[type='radio'] + label:before, input[type='radio'] + label:after,
-	input[type='checkbox'] + label:before,
-	input[type='checkbox'] + label:after {
+.formwizard   input[type='radio'] + label:before, .formwizard   input[type='radio'] + label:after,
+	.formwizard  input[type='checkbox'] + label:before,
+	 .formwizard   input[type='checkbox'] + label:after {
 	  content: '';
 	  font-family: helvetica;
 	  display: inline-block;
